@@ -102,9 +102,8 @@
 - Strategies To Crack Tech Interviews
 
 
-Module 10 - Guidance For Effective Job Searching
-
-Linkedin Profile Making
-How To Expand Your Professional Network On Linkedin
-How To Use Various Job Portals
-How To Approach For Referrals
+### Module 10 - Guidance For Effective Job Searching
+- Linkedin Profile Making
+- How To Expand Your Professional Network On Linkedin
+- How To Use Various Job Portals
+- How To Approach For Referrals

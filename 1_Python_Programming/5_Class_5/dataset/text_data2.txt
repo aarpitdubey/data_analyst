@@ -1,0 +1,3 @@
+Alice 28 NewYork
+Bob 35 LosAngeles
+Charlie 22 Chicago

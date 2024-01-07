@@ -1,109 +1,67 @@
-# Fast Track Data Analyst Bootcamp (NooB 2.0 LIVE Batch)
+**Data :** Data refers to distinct pieces of information (or) numbers, words, measurements, observations, facts, figures, audio, video etc.,
 
-### Module 1 - Python Programming 
-- Python Introduction
-- Intro to Jupyter Notebook and installation
-- Variables, Data Types and Operators in Python
-- Data Structures in Python: Tuple, List, Dictionary & Set
-- Python Object-Oriented Programming: Class & Object
-- Searching and Sorting
-- Data Analysis Libraries in Python - NumPy, Pandas
-- Data Visualization with Python: Matplotlib, SeaBorn
-- Data Cleaning and Exploratory Data Analysis(EDA)
-- Capstone Project
- 
-### Module 2 - SQL 
-- MySQL Installation guide Connection & set up
-- DDL, DML, DCL in SQL
-- Data type of SQL
-- Create, Insert, Update, Alter, Delete, Drop, Truncate Operations
-- Views in SQL
-- Operators in SQL
-- WHERE clause, ORDER BY clause, GROUP BY & Having Clause
-- Aggregations Group Concat & Roll UP
-- CASE-WHEN Statement
-- Joins in SQL - Inner, Left, Right, Full, Self
-- Correlated subqueries IN, NOT IN, ANY, ALL, EXISTS, NOT EXISTS
-- Window Functions
-- Frame Clause in Window Functions
-- Common Table Expressions - Recursive, Iterative
-- Capstone Project
+**Database :** It is like a digital filing cabinet where data is stored in organized (or) procedural manner, data might be structured (or) unstructured.
+<br><br>Unstructured data refers to information that doesn't fit neatly into traditional row-and-column (or) database structures, such as text documents, images, videos, and social media posts such as Instagram database stores user profiles and comments (structured data), it also stores photos and videos (unstructured data), making it easy for users to access and share them.
 
-### Module 3 - MS-Excel 
+### Database Management System
 
-- Introduction to Excel
-- Phases of Data Analytics Project
-- Data Cleaning
-- Functions
-- Lookup Functions
-- Conditional Formatting
-- Data Validation
-- Pivot Tables
-- Data Visualisation using Excel
-- Capstone Project
+- A Database Management System (DBMS) is basically a software where you can store, retrieve, define, and manage your data in a database.
 
+1. MySQL
+2. Oracle
+3. Microsoft SQL 
+4. PostgreSQL
+5. MongoDB
 
-### Module 4 - Python in Excel 
-- Introduction to Python in Excel
-- Troubleshoot Python in Excel Errors
-- Data Security
-- Python in Excel DataFrames
-- Create Python in Excel Plots & Charts
-- Use Power Query data with Python in Excel
+## Advantages of Database Management System
 
+- DBMS has lots of techniques to store, manipulate, and retrieve data.
 
-### Module 5 - Statistics
-- Introduction to Statistics
-- Standard Deviation
-- Correlation and Covariation
-- Introduction to Probability
-- Hypothesis Testing
-- Marginal and Conditional Probability
-- Normal Distribution
+- DBMS considered as an most efficient handler to balance the data.
 
+- A DBMS uses lots of powerful functions to store, manipulate and retrieve data efficiently.
 
-### Module 6 - Power BI (Dashboarding) 
-- Introduction to Microsoft Azure Cloud
-- Data Ingestion
-- Data Storage
-- Data Processing and Transformations
-- Data Analysis
-- Monitoring and Optimizations
+- Data Integrity and Security is one of the most strong part of DBMS
+
+- DBMS use data integrity to protect data and maintains the privacy.
+
+- Helps to reduce Application Development Time.
+
+**RDBMS** : A Relational database management system (RDBMS) is used for database management.
+
+- Data in RDBMS is store in database objects called table. A table is a collection of related data entries, and it consists of rows and columns.
+
+- A record, also called a row in each individual entry that exists in the table.
+
+- A column is a vertical entity in a table that conatins all the information associated with a specific field in a table.
+
+#### What is SQL?
+
+- SQL stands for Structured Query Language.
+
+- SQL lets you access and manipulate databases.
+
+- SQL become a standard of the American National Standards Institute (ANSI) in 1986, and of the International Organization for Standardization (ISO) in 1987.
+
+TYPES OF COMMANDS:
+1. DDL 
+    - CREATE
+    - ALTER
+    - DROP
+    - TRUNCATE
+    - RENAME
+2. DML
+    - INSERT
+    - UPDATE
+    - DELETE
+3. DQL
+    - SELECT
+4. DCL
+    - GRANT
+    - REVOKE
+5. TCL
+    - ROLLBACK
+    - COMMIT
+    - SAVEPOINT
 
 
-### Power BI: Introduction and Setup
-- Load and clean-up data with Power BI
-- Build a data model in Power BI
-- Use DAX & Power Pivot to build measures and calculations
-- Creating visuals-Answering business questions with Power BI
-- Customizing visuals & interaction effects
-- Creating a comprehensive sales performance report
-- Updating and data refresh process
-- Advance Data Analysis and Dashboarding on Power BI
-- Capstone Project
-
-
-### Module 7 - Data Analytics on Azure Cloud 
-- Introduction to Microsoft Azure Cloud
-- Data Ingestion
-- Data Storage
-- Data Processing and Transformations
-- Data Analysis
-- Monitoring and Optimizations
-
-
-### Module 8 - Industrial Projects 
-- Supply Chain Data Analytics Projects
-- IPL (Indian Premier League) Data Analytics Projects
-
-
-### Module 9 - Resume And Interview Strategies
-- Attention Seeking Resume Preparation and Interview Strategies
-- Strategies To Crack Tech Interviews
-
-
-### Module 10 - Guidance For Effective Job Searching
-- Linkedin Profile Making
-- How To Expand Your Professional Network On Linkedin
-- How To Use Various Job Portals
-- How To Approach For Referrals

@@ -45,7 +45,7 @@
 
 TYPES OF COMMANDS:
 1. DDL 
-    - CREATE
+    - CREATE 
     - ALTER
     - DROP
     - TRUNCATE
@@ -64,4 +64,4 @@ TYPES OF COMMANDS:
     - COMMIT
     - SAVEPOINT
 
-
+![Alt text](image.png)

@@ -66,7 +66,7 @@ TYPES OF COMMANDS:
 
 ![Alt text](image.png)
 
-Command to create a database:
+1. Command to create a database:
 
 ```SQL
 CREATE DATABASE <database_name>;
@@ -76,3 +76,16 @@ CREATE DATABASE growdataskills;
 ```
 
 ![Alt text](./create_database_command.png)
+
+2.  Show all the available databases
+
+```SQL
+-- Before Show databases we have to select the database we are working upon.
+-- So, for this we have to use 'USE' command.
+USE growdataskills;
+
+-- Show databases
+SHOW DATABASES;
+```
+
+![USE and SHOW Databases](./Use_Show_databases.png)

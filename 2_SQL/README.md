@@ -65,3 +65,14 @@ TYPES OF COMMANDS:
     - SAVEPOINT
 
 ![Alt text](image.png)
+
+Command to create a database:
+
+```SQL
+CREATE DATABASE <database_name>;
+
+-- Let's create a database named it as 'growdataskills'
+CREATE DATABASE growdataskills;
+```
+
+![Alt text](./create_database_command.png)

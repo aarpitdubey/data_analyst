@@ -11,3 +11,11 @@ USE growdataskills;
 -- 4. To see in which database 
 --we are working or used DATABASE
 SELECT database();
+
+-- 5. Create a table student_table
+CREATE TABLE student_table(
+    student_id INT,
+    student_name VARCHAR(30),
+    course_name VARCHAR(50)
+);
+

@@ -102,9 +102,21 @@ USE growdataskills;
 ```
 ![USE and SHOW Databases](./Use_Show_databases.png)
 
-4. To see which database is in used or which database has been surrently selected
+4. To see which database is in used or which database has been currently selected
 
 ```SQl
 SELECT database();
 ```
 ![select database()](./select_database().png)
+
+5. To create a new table with in the database let a table named `student_table` let's create it.
+
+```SQl
+CREATE TABLE student_table(
+    student_id INT,
+    student_name VARCHAR(30),
+    course_name VARCHAR(50)
+);
+```
+
+![Creating student_table](./create_student_table.png)

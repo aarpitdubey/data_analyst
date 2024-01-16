@@ -64,7 +64,7 @@ TYPES OF COMMANDS:
     - COMMIT
     - SAVEPOINT
 
-![Alt text](image.png)
+![Alt text](./img/image.png)
 
 # DDL commands:
 
@@ -77,7 +77,7 @@ CREATE DATABASE <database_name>;
 CREATE DATABASE growdataskills;
 ```
 
-![Alt text](./create_database_command.png)
+![Alt text](./img/create_database_command.png)
 
 2.  Show all the available databases
 
@@ -90,7 +90,7 @@ USE growdataskills;
 SHOW DATABASES;
 ```
 
-![USE and SHOW Databases](./Use_Show_databases.png)
+![USE and SHOW Databases](./img/Use_Show_databases.png)
 
 3. To use the database
 
@@ -100,14 +100,14 @@ USE <database name>;
 -- Example
 USE growdataskills;
 ```
-![USE and SHOW Databases](./Use_Show_databases.png)
+![USE and SHOW Databases](./img/Use_Show_databases.png)
 
 4. To see which database is in used or which database has been currently selected
 
 ```SQl
 SELECT database();
 ```
-![select database()](./select_database().png)
+![select database()](./img/select_database().png)
 
 5. To create a new table with in the database let a table named `student_table` let's create it.
 
@@ -119,7 +119,7 @@ CREATE TABLE student_table(
 );
 ```
 
-![Creating student_table](./create_student_table.png)
+![Creating student_table](./img/create_student_table.png)
 
 6. To show all the available tables inside a database 
 
@@ -127,7 +127,7 @@ CREATE TABLE student_table(
 SHOW TABLES;
 ```
 
-![Shows all tables availables](./Show_tables.png)
+![Shows all tables availables](./img/Show_tables.png)
 
 7. Let's create a un-useful database to drop.
 
@@ -141,13 +141,13 @@ SHOW database();
 ```
 
 - database created successfully
-![create database ramayana](./create_ramayana_database.png)
+![create database ramayana](./img/create_ramayana_database.png)
 
 - use database ramayana
-![use ramayana database](./use_ramayana_database.png)
+![use ramayana database](./img/use_ramayana_database.png)
 
 - Checking the database is selected or not?
-![checking the selected database is ramayana or not](./show_database()_ramayana.png)
+![checking the selected database is ramayana or not](./img/show_database()_ramayana.png)
 
 8. Let's create a un-useful table to drop.
 
@@ -159,13 +159,13 @@ CREATE TABLE Ramayan_is_Mythology(
     Role VARCHAR(50)
 );
 ```
-![create a table ramayan_is_Mythology](./create_table_ramayana_is_mythology.png)
+![create a table ramayan_is_Mythology](./img/create_table_ramayana_is_mythology.png)
 
 - Show the database and table
-![shown all databases](./showing_databases_ramayana.png)
+![shown all databases](./img/showing_databases_ramayana.png)
 
 - Show the tables available in this database
-![Shown all tables in this database](./show_table_ramayan_is_mythology.png)
+![Shown all tables in this database](./img/show_table_ramayan_is_mythology.png)
 
 9. Let's insert some values into the table
 
@@ -179,4 +179,4 @@ INSERT INTO ramayana.ramayan_is_mythology(
 VALUES (6, 74, 'Ram (Yodha kaand)', 'King');
 ```
 
-![](./Inserted_1st_record_in_table_ramayan_is_mythology.png)
+![](./img/Inserted_1st_record_in_table_ramayan_is_mythology.png)

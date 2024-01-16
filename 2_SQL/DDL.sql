@@ -19,3 +19,6 @@ CREATE TABLE student_table(
     course_name VARCHAR(50)
 );
 
+-- For showing the tables inside a DATABASE
+SHOW TABLES;
+

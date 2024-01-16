@@ -120,3 +120,13 @@ CREATE TABLE student_table(
 ```
 
 ![Creating student_table](./create_student_table.png)
+
+6. To show all the available tables inside a database 
+
+```SQL
+SHOW TABLES;
+```
+
+![Shows all tables availables](./Show_tables.png)
+
+7. 

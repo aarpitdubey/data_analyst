@@ -66,6 +66,8 @@ TYPES OF COMMANDS:
 
 ![Alt text](image.png)
 
+# DDL commands:
+
 1. Command to create a database:
 
 ```SQL
@@ -89,3 +91,20 @@ SHOW DATABASES;
 ```
 
 ![USE and SHOW Databases](./Use_Show_databases.png)
+
+3. To use the database
+
+```SQl
+USE <database name>;
+
+-- Example
+USE growdataskills;
+```
+![USE and SHOW Databases](./Use_Show_databases.png)
+
+4. To see which database is in used or which database has been surrently selected
+
+```SQl
+SELECT database();
+```
+![select database()](./select_database().png)

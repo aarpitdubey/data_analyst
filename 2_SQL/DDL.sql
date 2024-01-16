@@ -21,4 +21,34 @@ CREATE TABLE student_table(
 
 -- For showing the tables inside a DATABASE
 SHOW TABLES;
+--      EXAMPLE: RAMAYANA DATABASE
 
+-- Creating un-useful database `Ramayana` and,
+-- un-useful table `Ramayan_is_Mythology` to drop.
+CREATE DATABASE IF NOT EXISTS Ramayana;
+
+-- Use the DATABASE `Ramayana`
+USE Ramayana;
+
+-- Showing the resulted databases!
+SELECT database();
+
+-- Creating a un-useful table `Ramayana_is_Mythology` to drop
+CREATE TABLE Ramayan_is_Mythology(
+    Chapter_or_kaand INT,
+    Number_of_Svarg INT,
+    Character_name VARCHAR(30),
+    Role VARCHAR(50)
+);
+
+SHOW DATABASES;
+
+SHOW TABLES;
+
+-- Inserting 1st record in the TABLE
+INSERT INTO ramayana.ramayan_is_mythology(
+    Chapter_or_kaand, 
+    Number_of_Svarg, 
+    Character_name, 
+    Role) 
+VALUES (6, 74, 'Ram (Yodha kaand)', 'King');

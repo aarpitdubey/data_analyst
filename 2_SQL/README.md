@@ -129,4 +129,54 @@ SHOW TABLES;
 
 ![Shows all tables availables](./Show_tables.png)
 
-7. 
+7. Let's create a un-useful database to drop.
+
+```SQL
+
+CREATE DATABASE IF NOT EXISTS Ramayana;
+
+USE Ramayana;
+
+SHOW database();
+```
+
+- database created successfully
+![create database ramayana](./create_ramayana_database.png)
+
+- use database ramayana
+![use ramayana database](./use_ramayana_database.png)
+
+- Checking the database is selected or not?
+![checking the selected database is ramayana or not](./show_database()_ramayana.png)
+
+8. Let's create a un-useful table to drop.
+
+```SQL
+CREATE TABLE Ramayan_is_Mythology(
+    Chapter_or_kaand INT,
+    Number_of_Svarg INT,
+    Character_name VARCHAR(30),
+    Role VARCHAR(50)
+);
+```
+![create a table ramayan_is_Mythology](./create_table_ramayana_is_mythology.png)
+
+- Show the database and table
+![shown all databases](./showing_databases_ramayana.png)
+
+- Show the tables available in this database
+![Shown all tables in this database](./show_table_ramayan_is_mythology.png)
+
+9. Let's insert some values into the table
+
+```SQl
+
+INSERT INTO ramayana.ramayan_is_mythology(
+    Chapter_or_kaand, 
+    Number_of_Svarg, 
+    Character_name, 
+    Role) 
+VALUES (6, 74, 'Ram (Yodha kaand)', 'King');
+```
+
+![](./Inserted_1st_record_in_table_ramayan_is_mythology.png)

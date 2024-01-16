@@ -52,3 +52,10 @@ INSERT INTO ramayana.ramayan_is_mythology(
     Character_name, 
     Role) 
 VALUES (6, 74, 'Ram (Yodha kaand)', 'King');
+
+-- Drop the table 'Ramayan_is_Mythology'
+DROP TABLE `Ramayan_is_Mythology`;
+
+SHOW TABLES;
+
+DROP DATABASE`Ramayana`;

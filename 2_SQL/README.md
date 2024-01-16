@@ -180,3 +180,16 @@ VALUES (6, 74, 'Ram (Yodha kaand)', 'King');
 ```
 
 ![](./img/Inserted_1st_record_in_table_ramayan_is_mythology.png)
+
+10. Drop the table `Ramayan_is_Mythology` because Ramayana is not a mythology it's our itihas (History).
+
+```SQL
+
+DROP TABLE `Ramayan_is_Mythology`;
+
+SHOW TABLES;
+
+```
+
+![](./img/drop_table_ramayan.png)
+

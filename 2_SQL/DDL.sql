@@ -70,3 +70,9 @@ RENAME COLUMN student_name TO names;
 -- Modify the column course_name VARCHAR(50) to column_name VARCHAR(100)
 ALTER TABLE student_table
 MODIFY COLUMN course_name VARCHAR(100);
+
+-- Taking the overview about the table COMMENT
+DESCRIBE student_table;
+
+-- OR in short we can write
+DESC student_table;

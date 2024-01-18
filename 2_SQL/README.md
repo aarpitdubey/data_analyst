@@ -222,3 +222,6 @@ MODIFY COLUMN course_name VARCHAR(100);
 ![Alt text](./img/Alter_and_modify.png)
 
 
+- Describe or find out the overview of the table 'student_table'
+
+![](./img/Desc_or_Describe.png)

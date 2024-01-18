@@ -203,4 +203,22 @@ ALTER TABLE student_table ADD email VARCHAR(100);
 
 
 ![Alt text](./img/Alter_and_add_email_column.png)
+- Successfully added email column!
+
+
+![Alt text](./img/email_col_added.png)
+
+Renaming the student_name column to names column
+
+![Alt text](./img/Alter_renaming_col_name.png)
+
+Alter and Modify the column course_name VARCHAR(50) to course_name VARCHAR(100)
+
+```SQl
+ALTER TABLE student_table
+MODIFY COLUMN course_name VARCHAR(100);
+```
+
+![Alt text](./img/Alter_and_modify.png)
+
 

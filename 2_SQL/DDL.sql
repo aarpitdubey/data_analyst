@@ -63,3 +63,10 @@ DROP DATABASE`Ramayana`;
 -- Alter to add email column in student_table
 ALTER TABLE student_table ADD email VARCHAR(100);
 
+-- Alter student_table and renaming the column name 'student_name' to 'names'
+ALTER TABLE student_table 
+RENAME COLUMN student_name TO names;
+
+-- Modify the column course_name VARCHAR(50) to column_name VARCHAR(100)
+ALTER TABLE student_table
+MODIFY COLUMN course_name VARCHAR(100);

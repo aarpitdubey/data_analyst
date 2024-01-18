@@ -193,3 +193,14 @@ SHOW TABLES;
 
 ![](./img/drop_table_ramayan.png)
 
+
+To Add another column to the table we use Alter.
+```SQL
+
+ALTER TABLE student_table ADD email VARCHAR(100);
+
+```
+
+
+![Alt text](./img/Alter_and_add_email_column.png)
+

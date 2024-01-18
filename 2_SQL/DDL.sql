@@ -59,3 +59,7 @@ DROP TABLE `Ramayan_is_Mythology`;
 SHOW TABLES;
 
 DROP DATABASE`Ramayana`;
+
+-- Alter to add email column in student_table
+ALTER TABLE student_table ADD email VARCHAR(100);
+

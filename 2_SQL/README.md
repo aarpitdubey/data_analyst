@@ -225,3 +225,43 @@ MODIFY COLUMN course_name VARCHAR(100);
 - Describe or find out the overview of the table 'student_table'
 
 ![](./img/Desc_or_Describe.png)
+
+let's inserted multiple values into the 'student_table' table.
+
+```sql
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(1, 'Arpit', 'Data Science', 'aarpitdubey@gmail.com');
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(2, 'Astha', 'Information Technology', 'asthadubey@gmail.com');
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(3, 'Shreya', 'Electronics and Communication', 'shreya.r@gmail.com');
+
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(4, 'Pradhut', 'Bussiness Administration', 'pradhutmishra@gmail.com');
+
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(5, 'Prerna', 'Master of Bussiness Administration', 'prernamishra@gmail.com');
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(6, 'Prachi', 'Master of Bussiness Administration', 'prachimishra@gmail.com');
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(7, 'Ekta', 'Information Technology', 'ekta06@gmail.com');
+
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(8, 'Aneesh', 'Mechanical', 'aneeshdubey@gmail.com');
+```
+
+![Alt text](./img/Inserted_values_student_table.png)
+
+Truncate deletes all the values of the table 'student_table' but doesn't affect the structure of the table.
+
+![Alt text](./img/Truncate_student_table.png)
+
+
+<center><b>DDL Queries Done</b></center>

@@ -76,3 +76,39 @@ DESCRIBE student_table;
 
 -- OR in short we can write
 DESC student_table;
+
+-- Adding values in student_table
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(1, 'Arpit', 'Data Science', 'aarpitdubey@gmail.com');
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(2, 'Astha', 'Information Technology', 'asthadubey@gmail.com');
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(3, 'Shreya', 'Electronics and Communication', 'shreya.r@gmail.com');
+
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(4, 'Pradhut', 'Bussiness Administration', 'pradhutmishra@gmail.com');
+
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(5, 'Prerna', 'Master of Bussiness Administration', 'prernamishra@gmail.com');
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(6, 'Prachi', 'Master of Bussiness Administration', 'prachimishra@gmail.com');
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(7, 'Ekta', 'Information Technology', 'ekta06@gmail.com');
+
+
+INSERT INTO student_table(student_id, names, course_name, email)
+VALUES(8, 'Aneesh', 'Mechanical', 'aneeshdubey@gmail.com');
+
+-- SELECT all the VALUES of TABLE
+SELECT names, course_name 
+FROM student_table
+
+-- TRUNCATE the TABLE
+TRUNCATE TABLE student_table

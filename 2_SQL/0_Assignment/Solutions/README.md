@@ -49,3 +49,25 @@ VALUES (1, "Arpit", "Dubey", 25),
 
 - `UPDATE` the column `Age` of `students` table `WHERE` the `StudentID` is equal to `1`.
 
+#### Query:
+
+```SQl
+UPDATE Students
+SET Age = 21
+WHERE StudentID = 1;
+```
+#### Execution:
+
+![](./img/update_the_age_successfully.png)
+
+- `DELETE` the record of student `WHERE` the `StudentID` is `3`.
+
+#### Query:
+
+```SQL
+DELETE FROM Students
+WHERE StudentID = 3;
+```
+#### Execution:
+
+![](./img/deleted_the_record_successfully.png)

@@ -29,7 +29,12 @@ Q3. Update the age of the student with StudentID `1` to `21`.
 Delete the student with StudentID `3` from the "Students" table.
 */
 
+-- UPDATE the age of the student with StudentID is equal to 1.
 UPDATE Students
 SET Age = 21
 WHERE StudentID = 1;
+
+-- DELETE students record WHERE StudentID is equal to 3.
+DELETE FROM Students
+WHERE StudentID = 3;
 

@@ -71,3 +71,83 @@ WHERE StudentID = 3;
 #### Execution:
 
 ![](./img/deleted_the_record_successfully.png)
+
+## Q4. Retrieve the first names and ages of all students who are older than 20.
+
+- Retrieving the `FirstName` and `Age` of all students without any condition.
+
+#### Query:
+
+```SQl
+SELECT FirstName, Age
+FROM Students
+```
+#### Execution:
+
+![](./img/retrieve_the_FirstName_and_Age_column.png)
+
+- Retrieving the `FirstName` and `Age` of all students `WHERE` the `Age` is greater than `20`..
+
+#### Query:
+
+```SQl
+SELECT FirstName, Age
+FROM Students
+WHERE Age > 20;
+```
+#### Execution:
+
+![](./img/retrieve_the_FirstName_and_Age_column_where_age_is_greater_than_20.png)
+
+**NOTE : To Perform more operation we required more values so I just inserted more values to the table.**
+
+#### Query:
+
+```SQL
+INSERT INTO Students(StudentID, FirstName, LastName, Age)
+VALUES (4, "Rahul", "Kumar", 12),
+       (5, 'Alice', 'Smith', 25),
+       (6, 'Bob', 'Johnson', 15),
+       (7, 'Eva', 'Martinez',16),
+       (8, 'Hariharan', 'S', 26);
+```
+
+#### Execution:
+![](./img/inserted_more_values.png)
+
+## Q5. Delete records from the same table where age < 18
+
+- `DELETE` those records from the `Students` table `WHERE` the `Age` column `VALUES` are lesser than `18`
+
+#### Query:
+
+```SQL
+DELETE FROM Students 
+WHERE Age < 18;
+```
+
+#### Execution:
+
+![](./img/deleted_the_record_successfully_where_age_less_than_18.png)
+
+## Q6. Create a table named "Customers" with the following columns and constraints: CustomerID (int) as the primary key.FirstName (varchar) not null. LastName (varchar) not null. Email (varchar) unique. Age (int) check constraint to ensure age is greater than 18.
+
+- `CREATE` a `TABLE` named it as `Customers`
+- With columns such as `CustomerID`, `FirstName`, `LastName`, `Email` and, `Age`.
+- `Age` columns must having a `CHECK` constraint where it ensures the `Age` will not be less than 18.
+
+#### Query:
+
+```SQL
+CREATE TABLE Customers(
+    CustomerID INT PRIMARY KEY,
+    FirstName VARCHAR(60) NOT NULL,
+    LastName VARCHAR(60) NOT NULL,
+    Email VARCHAR(80) UNIQUE,
+    Age INT CHECK (Age > 18)
+);
+```
+
+#### Execution:
+
+![](./img/created-another_customer_table.png)

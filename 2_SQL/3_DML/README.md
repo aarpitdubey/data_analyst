@@ -31,3 +31,12 @@ WHERE names = 'Prachi';
 ```
 
 ![](./img/DELETE_student_Prachi.png)
+
+```SQL
+DELETE FROM student_table;
+```
+
+![](./img/DELETE_TABLE.png)
+
+
+<center> DML Done </center>

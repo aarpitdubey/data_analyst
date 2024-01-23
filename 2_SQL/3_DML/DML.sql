@@ -39,6 +39,8 @@ UPDATE student_table
 SET email = 'shreya201@gmail.com'
 WHERE names = 'Shreya';
 
-
+-- Deleting values
 DELETE FROM student_table 
 WHERE names = 'Prachi';
+
+DELETE FROM student_table;

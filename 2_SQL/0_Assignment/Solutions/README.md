@@ -31,3 +31,21 @@ CREATE TABLE Students(
 #### Execution:
 
 ![](./img/Ques2_Create_Student_table.png)
+
+- Inserting 3 random records into the table `Students`
+#### Query:
+```SQl
+INSERT INTO Students(StudentID, FirstName, LastName, Age) 
+VALUES (1, "Arpit", "Dubey", 25),
+       (2, "Shaija", "Mishra", 23),
+       (3, "Spider", "Man", 29);
+```
+#### Execution:
+
+![](./img/Inserted_3_records_successfully.png)
+
+
+## Q3. Update the age of the student with StudentID `1` to `21`. Delete the student with StudentID `3` from the "Students" table.
+
+- `UPDATE` the column `Age` of `students` table `WHERE` the `StudentID` is equal to `1`.
+

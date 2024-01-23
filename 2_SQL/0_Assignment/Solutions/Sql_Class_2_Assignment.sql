@@ -19,7 +19,17 @@ CREATE TABLE Students(
 );
 
 -- Insert 3 records randomly
+INSERT INTO Students(StudentID, FirstName, LastName, Age) 
+VALUES (1, "Arpit", "Dubey", 25),
+       (2, "Shaija", "Mishra", 23),
+       (3, "Spider", "Man", 29);
 
-INSERT INTO Students(StudentID, FirstName, LastName, Age)
-VALUES
-()
+/*
+Q3. Update the age of the student with StudentID `1` to `21`. 
+Delete the student with StudentID `3` from the "Students" table.
+*/
+
+UPDATE Students
+SET Age = 21
+WHERE StudentID = 1;
+

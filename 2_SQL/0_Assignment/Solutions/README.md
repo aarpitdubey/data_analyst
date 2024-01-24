@@ -562,3 +562,96 @@ WHERE city NOT IN ('New York', 'Los Angeles');
 #### Execution:
 
 ![](./img/retrieve_record_of_customers_who_are_not_from_newyork_or_losAngeles.png)
+
+## Q18. Retrieve the names of employees from the "Employees" table who are either from the "HR" department and have an age less than 30, or they are from the "Finance" department and have an age greater than or equal to 35.
+
+#### Query:
+
+```SQl
+SELECT FirstName, LastName
+FROM employees
+WHERE (`Department` = 'HR' AND `Age` < 30) 
+OR (`Department` = 'Finance' AND `Age` >= 35)
+```
+
+#### Execution:
+![](./img/emp_who_are_from_HR_Finance_or_age_greater_than_30_or_greater_than_or_equal_to_35.png)
+
+## Q19. Retrieve the names of customers from the "Customers" table who are not from the city 'London' and either have a postal code starting with '1' or their country is not 'USA'.
+
+- We donot have country or postal code in Customers table so let's add them FIRST!
+
+#### Query:
+
+```SQL
+ALTER TABLE Customers
+ADD COLUMN PostalCode varchar(20),
+ADD COLUMN Country varchar(255);
+```
+#### Execution:
+
+![](./img/Adding_postalcode_and_country_columns_in_customers_table.png)
+
+- Updating Values for PostalCode and Country columns in Customers table
+
+#### Query:
+
+```SQL
+UPDATE Customers
+SET PostalCode = '10001', Country = 'USA'
+WHERE CustomerID = 1001;
+
+UPDATE Customers
+SET PostalCode = '20002', Country = 'USA'
+WHERE CustomerID = 1002;
+
+UPDATE Customers
+SET PostalCode = 'WC1A 1AA', Country = 'UK'
+WHERE CustomerID = 1003;
+
+UPDATE Customers
+SET PostalCode = '2000', Country = 'Australia'
+WHERE CustomerID = 1004;
+
+UPDATE Customers
+SET PostalCode = '100-0005', Country = 'Japan'
+WHERE CustomerID = 1005;
+
+UPDATE Customers
+SET PostalCode = '75001', Country = 'France'
+WHERE CustomerID = 1006;
+
+UPDATE Customers
+SET PostalCode = '10115', Country = 'Germany'
+WHERE CustomerID = 1007;
+
+UPDATE Customers
+SET PostalCode = 'M5V 2Z5', Country = 'Canada'
+WHERE CustomerID = 1008;
+
+UPDATE Customers
+SET PostalCode = '12345', Country = 'UAE'
+WHERE CustomerID = 1009;
+
+UPDATE Customers
+SET PostalCode = '400001', Country = 'India'
+WHERE CustomerID = 1010;
+```
+
+#### Execution:
+
+![](./img/update_postalcode_and_country_column_in_customers_table.png)
+
+- Retrieve the names of customers, who are not from the city 'London' and either have a postal code starting with '1' or their country is not 'USA'.
+
+#### Query:
+
+```SQL
+SELECT FirstName, LastName
+FROM Customers
+WHERE `city` != 'London'
+AND (`PostalCode` LIKE '1%' OR `Country` != 'USA');
+```
+
+#### Execution:
+![](./img/retrieving_empname_who_are_not_from_london_or_usa_or_having_postalcode_starts_with_1.png)

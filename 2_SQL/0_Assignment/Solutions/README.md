@@ -151,3 +151,59 @@ CREATE TABLE Customers(
 #### Execution:
 
 ![](./img/created-another_customer_table.png)
+
+
+## Q7. You have a table named "Orders" with columns: OrderID (int), CustomerID (int), OrderDate (date), and TotalAmount (decimal). Create a foreign key constraint on the "CustomerID" column referencing the "Customers" table.
+
+- Create Orders Table with Foreign Key Constraint: Now, create the "Orders" table while referencing the "Customers" table by including a foreign key constraint. Here's an example SQL script to create the "Orders" table with the foreign key constraint:
+
+#### Query:
+
+```SQL
+CREATE TABLE Orders(
+    OrderID INT,
+    CustomerID INT,
+    OrderDate DATE,
+    TotalAmount DECIMAL(10,2),
+    CONSTRAINT FK_CustomerID
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+```
+
+**Introduction:** Provide an overview of the requirement to create the "Orders" table and to establish a relationship with the "Customers" table.
+
+**Step 1:** Explain the creation of the "Customers" table with columns like CustomerID and CustomerName. Include the SQL script for creating the table.
+
+**Step 2:** Describe the creation of the "Orders" table with columns like OrderID, CustomerID, OrderDate, and TotalAmount. Clarify the addition of a foreign key constraint on the "CustomerID" column, referencing the "CustomerID" column in the "Customers" table. Include the SQL script for creating the table along with the foreign key constraint.
+
+#### Execution:
+
+![](./img/create_table_orders.png)
+
+## Q8. Create a table named "Employees" with columns: EmployeeID (int) as the primary key. FirstName (varchar) not null. LastName (varchar) not null. Salary (decimal) check constraint to ensure salary is between 20000 and 100000.
+
+- `CREATE` `TABLE` `Employees`: This line initiates the creation of the "`Employees`" table.
+
+- (`EmployeeID` int `PRIMARY KEY`): Defines the "`EmployeeID`" column as an integer primary key.
+
+- (`FirstName` varchar(80) `NOT NULL`): Specifies the "`FirstName`" column as a non-null varchar datatype.
+
+- (`LastName` varchar(80) `NOT NULL`): Specifies the "`LastName`" column as a non-null varchar datatype.
+
+- `Salary` `DECIMAL(10,2)` `CHECK` (`Salary` `BETWEEN` 20000 `and` 100000): `SET` the "`Salary`" column as a decimal type with a precision of 10 digits and 2 decimal places and adds a check constraint to ensure that the salary is between 20000 and 100000.
+
+#### Query:
+
+```SQl
+CREATE TABLE Employees(
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(80) NOT NULL,
+    LastName VARCHAR(80) NOT NULL,
+    Salary DECIMAL(10,2) CHECK (Salary BETWEEN 20000 and 100000)
+);
+```
+
+#### Execution:
+
+![](./img/created_employees_table.png)
+

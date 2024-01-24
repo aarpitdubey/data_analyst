@@ -80,3 +80,34 @@ CREATE TABLE Customers(
     Email VARCHAR(80) UNIQUE,
     Age INT CHECK (Age > 18)
 );
+
+/*
+Q7. You have a table named "Orders" with columns: 
+OrderID (int), CustomerID (int), OrderDate (date), and 
+TotalAmount (decimal). Create a foreign key constraint on the
+"CustomerID" column referencing the "Customers" table.
+*/
+
+CREATE TABLE Orders(
+    OrderID INT,
+    CustomerID INT,
+    OrderDate DATE,
+    TotalAmount DECIMAL(10,2),
+    CONSTRAINT FK_CustomerID
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+/*
+Q8. Create a table named "Employees" with columns:
+EmployeeID (int) as the primary key.
+FirstName (varchar) not null.
+LastName (varchar) not null.
+Salary (decimal) check constraint to ensure salary is between 20000 and 100000.
+*/
+
+CREATE TABLE Employees(
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(80) NOT NULL,
+    LastName VARCHAR(80) NOT NULL,
+    Salary DECIMAL(10,2) CHECK (Salary BETWEEN 20000 and 100000)
+);

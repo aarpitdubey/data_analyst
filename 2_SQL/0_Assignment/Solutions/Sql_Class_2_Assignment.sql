@@ -111,3 +111,57 @@ CREATE TABLE Employees(
     LastName VARCHAR(80) NOT NULL,
     Salary DECIMAL(10,2) CHECK (Salary BETWEEN 20000 and 100000)
 );
+
+/*
+Q9. Create a table named "Books" with columns:
+BookID (int) as the primary key.
+Title (varchar) not null.
+ISBN (varchar) unique.
+*/
+
+CREATE TABLE Books(
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(80) NOT NULL,
+    ISBN VARCHAR(80) UNIQUE
+);
+
+
+/*
+Q10. Consider a table named "Employees" with columns: EmployeeID, FirstName,
+LastName, and Age. Write an SQL query to retrieve the first name and last name of
+employees who are older than 30
+*/
+
+-- Adding Age column to pre-exist Employees TABLE
+ALTER TABLE Employees
+ADD Age INT;
+
+-- Inserting some random values to Employees TABLE
+INSERT INTO Employees (EmployeeID, FirstName, LastName, Salary, Age) 
+VALUES 
+(1, 'Shivcharan', 'Das', 45000.00, 32),
+(2, 'Krish', 'Naik', 60000.00, 35),
+(3, 'Rohit', 'Kapoor', 75000.00, 42),
+(4, 'Ekta', 'Dubey', 95000.00, 36),
+(5, 'Shailja', 'Mishra', 80000.00, 23),
+(6, 'Hariharan', 'S', 65000.00, 25),
+(7, 'Aman', 'Gupta', 90000.00, 45),
+(8, 'Arpit', 'Dubey', 90800.00, 26),
+(9, 'Shreya', 'Richharia', 42000.00, 27),
+(10, 'Sudhanshu', 'Kumar', 30000.00, 40);
+
+-- SQL query to retrieve the first name 
+-- and last name of employees who are older than 30
+
+SELECT FirstName, LastName
+FROM Employees
+WHERE Age > 30
+
+/*
+Q11. Using the same "Employees" table, write an SQL query to retrieve the first name, last
+name, and age of employees whose age is between 20 and 30
+*/
+
+SELECT FirstName, LastName, Age
+FROM Employees
+WHERE Age BETWEEN 20 and 30;

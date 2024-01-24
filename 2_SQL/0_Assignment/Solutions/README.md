@@ -176,6 +176,13 @@ CREATE TABLE Orders(
 
 **Step 2:** Describe the creation of the "Orders" table with columns like OrderID, CustomerID, OrderDate, and TotalAmount. Clarify the addition of a foreign key constraint on the "CustomerID" column, referencing the "CustomerID" column in the "Customers" table. Include the SQL script for creating the table along with the foreign key constraint.
 
+```SQL
+ALTER TABLE Orders
+ADD CONSTRAINT FK_Customer
+FOREIGN KEY (CustomerID)
+REFERENCES Customers(CustomerID);
+```
+
 #### Execution:
 
 ![](./img/create_table_orders.png)
@@ -207,3 +214,87 @@ CREATE TABLE Employees(
 
 ![](./img/created_employees_table.png)
 
+## Q9. Create a table named "Books" with columns: BookID (int) as the primary key. Title (varchar) not null. ISBN (varchar) unique.
+
+- `CREATE TABLE Books`: Initiates the creation of a table named "`Books`" in the database.
+
+- `(BookID INT PRIMARY KEY)`: Defines the "`BookID`" column as an integer primary key, ensuring its uniqueness and serving as the identifier for each book.
+
+- `(Title VARCHAR(80) NOT NULL)`: Specifies the "`Title`" column as a non-null varchar data type, allowing up to 80 characters for the book title.
+
+- `(ISBN VARCHAR(80) UNIQUE)`: Defines the "`ISBN`" column as a varchar data type with a maximum length of 80 characters, and adds a constraint to ensure that each `ISBN` value is unique.
+
+#### Query:
+
+```SQL
+CREATE TABLE Books(
+    BookID INT PRIMARY KEY,
+    Title VARCHAR(80) NOT NULL,
+    ISBN VARCHAR(80) UNIQUE
+);
+```
+#### Execution:
+
+![](./img/created_books_table.png)
+
+## Q10. Consider a table named "Employees" with columns: EmployeeID, FirstName, LastName, and Age. Write an SQL query to retrieve the first name and last name of employees who are older than 30
+
+- Adding Age column to pre-exist Employees TABLE
+
+#### Query:
+```SQl
+ALTER TABLE Employees
+ADD Age INT;
+```
+#### Execution:
+
+![](./img/altering_employees_table_add_age_column.png)
+
+- Inserting some random values to Employees TABLE
+
+#### Query:
+
+```SQl
+INSERT INTO Employees (EmployeeID, FirstName, LastName, Salary, Age) 
+VALUES 
+(1, 'Shivcharan', 'Das', 45000.00, 32),
+(2, 'Krish', 'Naik', 60000.00, 35),
+(3, 'Rohit', 'Kapoor', 75000.00, 42),
+(4, 'Ekta', 'Dubey', 95000.00, 36),
+(5, 'Shailja', 'Mishra', 80000.00, 23),
+(6, 'Hariharan', 'S', 65000.00, 25),
+(7, 'Aman', 'Gupta', 90000.00, 45),
+(8, 'Arpit', 'Dubey', 90800.00, 26),
+(9, 'Shreya', 'Richharia', 42000.00, 27),
+(10, 'Sudhanshu', 'Kumar', 30000.00, 40);
+```
+#### Execution:
+
+![](./img/inserting_values_in_employees_table.png)
+
+- SQL query to retrieve the first name and last name of employees who are older than 30
+
+#### Query:
+
+```SQL
+SELECT FirstName, LastName
+FROM Employees
+WHERE Age > 30
+```
+#### Execution:
+
+![](./img/emp_who_are_older_than_30years.png)
+
+## Q11. Using the same "Employees" table, write an SQL query to retrieve the first name, last name, and age of employees whose age is between 20 and 30.
+
+#### Query:
+
+```SQL
+SELECT FirstName, LastName, Age
+FROM Employees
+WHERE Age BETWEEN 20 and 30;
+```
+
+#### Execution:
+
+![](./img/age_between_20_and_30.png)

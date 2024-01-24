@@ -265,3 +265,88 @@ SELECT ProductName
 FROM Products
 WHERE Price BETWEEN 50 AND 100;
 
+/*
+Q16. Retrieve the names of employees from the "Employees" table who are both from the
+"Sales" department and have an age greater than 25, or they are from the "Marketing"
+department.
+*/
+
+-- ADD Department column to Employees table
+ALTER TABLE Employees
+ADD COLUMN Department varchar(255);
+
+-- Adding Department column to pre-exist Employees TABLE
+UPDATE Employees
+SET Department = 'Sales' WHERE EmployeeID IN (1, 2, 5);
+UPDATE Employees
+SET Department = 'Marketing' WHERE EmployeeID IN (3, 6, 10);
+UPDATE Employees
+SET Department = 'Finance' WHERE EmployeeID IN (4, 7, 8);
+UPDATE Employees
+SET Department = 'HR' WHERE EmployeeID IN (9);
+
+-- who are both from the "Sales" department and have an age greater than 25, 
+-- or they are from the "Marketing" department.
+
+SELECT FirstName, LastName
+FROM Employees
+WHERE (`Department` = 'Sales' AND `Age` > 25)
+OR `Department` = 'Marketing';
+
+/*
+Q17. Retrieve the names of customers from the "Customers" table 
+who are not from the city 'New York' or 'Los Angeles.
+*/
+
+-- Our Customers table doesnot have `city` column so let add that column in Customers table.
+
+ALTER TABLE Customers
+ADD COLUMN city varchar(255);
+
+-- Updating city column because it contains NUL values.
+UPDATE Customers
+SET City = 'New York'
+WHERE CustomerID = 1001;
+
+UPDATE Customers
+SET City = 'Los Angeles'
+WHERE CustomerID = 1002;
+
+UPDATE Customers
+SET City = 'London'
+WHERE CustomerID = 1003;
+
+UPDATE Customers
+SET City = 'Sydney'
+WHERE CustomerID = 1004;
+
+UPDATE Customers
+SET City = 'Tokyo'
+WHERE CustomerID = 1005;
+
+UPDATE Customers
+SET City = 'Paris'
+WHERE CustomerID = 1006;
+
+UPDATE Customers
+SET City = 'Berlin'
+WHERE CustomerID = 1007;
+
+UPDATE Customers
+SET City = 'Toronto'
+WHERE CustomerID = 1008;
+
+UPDATE Customers
+SET City = 'Dubai'
+WHERE CustomerID = 1009;
+
+UPDATE Customers
+SET City = 'Mumbai'
+WHERE CustomerID = 1010;
+
+--  Retrieve the names of customers
+-- who are not from the city 'New York' or 'Los Angeles
+
+SELECT FirstName, LastName
+FROM Customers
+WHERE city NOT IN ('New York', 'Los Angeles');

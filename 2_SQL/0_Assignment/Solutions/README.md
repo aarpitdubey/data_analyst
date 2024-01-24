@@ -437,3 +437,128 @@ WHERE Price BETWEEN 50 AND 100;
 #### Execution:
 
 ![](./img/retrieve_productsname_prices_are_between_50_and_100.png)
+
+## Q16. Retrieve the names of employees from the "Employees" table who are both from the "Sales" department and have an age greater than 25, or they are from the "Marketing" department.
+
+- There is no Department column in the "Employees" table so, let's first
+alter the "Employees" table and add up one more column named it as "Department"
+
+#### Query:
+
+```SQL
+ALTER TABLE Employees
+ADD COLUMN Department varchar(255);
+```
+#### Execution:
+
+![](./img/added_department_column_in_employees_table.png)
+
+- let's now filled all the NULL values in Department column
+
+```SQL
+UPDATE Employees
+SET Department = 'Sales' WHERE EmployeeID IN (1, 2, 5);
+UPDATE Employees
+SET Department = 'Marketing' WHERE EmployeeID IN (3, 6, 10);
+UPDATE Employees
+SET Department = 'Finance' WHERE EmployeeID IN (4, 7, 8);
+UPDATE Employees
+SET Department = 'HR' WHERE EmployeeID IN (9);
+```
+
+#### Execution:
+
+![](./img/Updating_values_in_department_column.png)
+
+- Retrieving, who are both from the "Sales" department and have an age greater than 25, or they are from the "Marketing" department.
+
+#### Query:
+
+```SQL
+SELECT FirstName, LastName
+FROM Employees
+WHERE (`Department` = 'Sales' AND `Age` > 25)
+OR `Department` = 'Marketing';
+```
+
+#### Execution:
+
+![](./img/retrieving_emp_from_sales_and_age_greater_than_25_or_from_marketing.png)
+
+## Q17. Retrieve the names of customers from the "Customers" table who are not from the city 'New York' or 'Los Angeles.
+
+- Our Customers table doesnot have `city` column so let add that column in Customers table.
+
+#### Query:
+
+```SQl
+ALTER TABLE Customer
+ADD COLUMN city varchar(255);
+```
+
+#### Execution:
+
+![](./img/Added_column_city_successfully.png)
+
+- Updating city column because it contains NULL values.
+
+#### Query:
+
+```SQL
+UPDATE Customers
+SET City = 'New York'
+WHERE CustomerID = 1001;
+
+UPDATE Customers
+SET City = 'Los Angeles'
+WHERE CustomerID = 1002;
+
+UPDATE Customers
+SET City = 'London'
+WHERE CustomerID = 1003;
+
+UPDATE Customers
+SET City = 'Sydney'
+WHERE CustomerID = 1004;
+
+UPDATE Customers
+SET City = 'Tokyo'
+WHERE CustomerID = 1005;
+
+UPDATE Customers
+SET City = 'Paris'
+WHERE CustomerID = 1006;
+
+UPDATE Customers
+SET City = 'Berlin'
+WHERE CustomerID = 1007;
+
+UPDATE Customers
+SET City = 'Toronto'
+WHERE CustomerID = 1008;
+
+UPDATE Customers
+SET City = 'Dubai'
+WHERE CustomerID = 1009;
+
+UPDATE Customers
+SET City = 'Mumbai'
+WHERE CustomerID = 1010;
+```
+#### Execution:
+
+![](./img/updated-city_column_values.png)
+
+-  Retrieve the names of customers who are not from the city 'New York' or 'Los Angeles
+
+#### Query:
+
+```SQL
+SELECT FirstName, LastName
+FROM Customers
+WHERE city NOT IN ('New York', 'Los Angeles');
+```
+
+#### Execution:
+
+![](./img/retrieve_record_of_customers_who_are_not_from_newyork_or_losAngeles.png)

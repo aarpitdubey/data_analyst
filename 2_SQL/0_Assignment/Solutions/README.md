@@ -298,3 +298,142 @@ WHERE Age BETWEEN 20 and 30;
 #### Execution:
 
 ![](./img/age_between_20_and_30.png)
+
+## Q12. Given a table named "Products" with columns: ProductID, ProductName, Price, and InStock (0- for out of stock, 1- for in stock). Write an SQL query to retrieve the product names and prices of products that are either priced above $100 or are out of stock
+
+- Create a table named "Products"
+
+#### Query:
+
+```SQL
+CREATE TABLE Products(
+    ProductID INT,
+    ProductName VARCHAR(80),
+    Price DECIMAL(10, 2),
+    InStock INT
+);
+```
+#### Execution:
+
+![](./img/create_products_table.png)
+
+- Inserting some random values to the table
+
+#### Query:
+
+```SQl
+
+INSERT INTO Products (ProductID, ProductName, Price, InStock) 
+VALUES 
+(1, 'Widget A', 120.00, 1),
+(2, 'Gizmo X', 80.50, 0),
+(3, 'Thingamajig', 150.00, 1),
+(4, 'Doohickey', 90.00, 1),
+(5, 'Whatchamacallit', 110.00, 0),
+(6, 'Widget B', 95.00, 1),
+(7, 'Gadget Y', 200.00, 0),
+(8, 'Contraption Z', 180.00, 1),
+(9, 'Doodad', 75.00, 0),
+(10, 'Device Q', 105.00, 1);
+```
+
+#### Execution:
+
+![](./img/inserting_values_in_products_table.png)
+
+- SQL query to retrieve the product names and prices of products that are either priced above $100 or are out of stock
+
+#### Query:
+
+```SQL
+SELECT ProductName, Price
+FROM Products
+WHERE Price > 100 OR InStock = 0;
+```
+#### Execution:
+
+![](./img/products_price_greater_than_100dollars_or_are_out_of_stock.png)
+
+## Q13. Using the "Products" table, write an SQL query to retrieve the product names and prices of products that are in stock and priced between 50 and 150.
+
+#### Query:
+
+```SQL
+SELECT ProductName, Price
+FROM Products
+WHERE InStock = 1 AND Price BETWEEN 50 AND 150;
+```
+#### Execution:
+
+![](./img/products_whose_are_in_stock_and_prices_are_in_between_50_and_150.png)
+
+## Q14. Consider a table named "Orders" with columns:  OrderID, OrderDate, TotalAmount, and CustomerID. Write an SQL query to retrieve the order IDs and total amounts of orders placed by customer ID 1001 after January 1, 2023, or orders with a total amount exceeding $500
+
+- Our `Customers` table is empty, so we have to put some values in that because our `Orders` table have a Foreign Key referencing to `Customers` table. 
+
+#### Query:
+
+```SQL
+INSERT INTO Customers (CustomerID, FirstName, LastName, Email, Age) 
+VALUES 
+(1001, 'John', 'Doe', 'john.doe@example.com', 35),
+(1002, 'Jane', 'Smith', 'jane.smith@example.com', 28),
+(1003, 'Michael', 'Johnson', 'michael.johnson@example.com', 42),
+(1004, 'Emily', 'Davis', 'emily.davis@example.com', 29),
+(1005, 'Andrew', 'Wilson', 'andrew.wilson@example.com', 37),
+(1006, 'Jessica', 'Brown', 'jessica.brown@example.com', 31),
+(1007, 'William', 'Martinez', 'william.martinez@example.com', 45),
+(1008, 'Olivia', 'Garcia', 'olivia.garcia@example.com', 26),
+(1009, 'David', 'Anderson', 'david.anderson@example.com', 33),
+(1010, 'Sophia', 'Lopez', 'sophia.lopez@example.com', 40);
+```
+#### Execution:
+
+![](./img/inserting_values_in_customers_table.png)
+
+- Now, Inserting some random values in pre-created Orders TABLE
+
+```SQL
+(1,  1001, '2023-01-15', 450.00),
+(2,  1002, '2023-02-20', 700.00),
+(3,  1003, '2023-01-05', 300.00),
+(4,  1001, '2023-03-10', 800.00),
+(5,  1001, '2023-02-28', 550.00),
+(6,  1004, '2023-01-20', 480.00),
+(7,  1001, '2023-02-10', 650.00),
+(8,  1001, '2023-04-05', 350.00),
+(9,  1005, '2023-03-15', 900.00),
+(10, 1001, '2023-01-25', 750.00);
+
+```
+#### Execution:
+
+![](./img/inserting_values_in_orders_table.png)
+
+- SQL query to retrieve the order IDs and total amounts of orders placed by customer ID 1001 after January 1, 2023, or orders with a total amount exceeding $500
+
+#### Query:
+
+```SQL
+SELECT OrderID, TotalAmount
+FROM Orders
+WHERE (CustomerID = 1001 AND OrderDate > '2023-01-01') 
+OR TotalAmount > 500;
+```
+
+#### Execution:
+![](./img/retrieve_orderID_TotalAmount_custid_1001_OrderDate_greater_than_01_01_2023_or_TotalAmount_greater_than_500.png)
+
+## Q15. Retrieve the ProductName of products from the "Products" table that have a price between $50 and $100.
+
+#### Query:
+
+```SQL
+SELECT ProductName
+FROM Products
+WHERE Price BETWEEN 50 AND 100;
+```
+
+#### Execution:
+
+![](./img/retrieve_productsname_prices_are_between_50_and_100.png)

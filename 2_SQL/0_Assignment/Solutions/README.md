@@ -655,3 +655,10 @@ AND (`PostalCode` LIKE '1%' OR `Country` != 'USA');
 
 #### Execution:
 ![](./img/retrieving_empname_who_are_not_from_london_or_usa_or_having_postalcode_starts_with_1.png)
+<hr>
+
+**Submitted By: Arpit Dubey**<br>
+**Email ID: aarpitdubey@gmail.com**<br>
+**LinkedIn: [click here](https://www.linkedin.com/in/aarpitdubey/)**<br>
+**Github  : [click here](https://github.com/aarpitdubey)**
+<hr>

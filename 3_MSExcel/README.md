@@ -13,4 +13,4 @@ When using the auto-fill feature to populate a series of years in Excel, such as
 
 3. Click and drag the fill handle down to the desired end value, in this case 2023. As you drag, Excel will automatically populate the cells with the sequential years.
 
-![](./images/Auto_Filling_feature.gif)
+![Autofilling Feature](./images/Auto_Filling_feature.gif)

@@ -9,7 +9,7 @@ The auto-fill feature in Microsoft Excel is a powerful tool that allows users to
 When using the auto-fill feature to populate a series of years in Excel, such as from 2018 to 2023, users can follow these steps:
 
 1. Begin by entering the starting value in the first cell, in this case 2018.
-2. Move the cursor to the bottom-right corner of the cell containing the value 2018. The cursor should change to a small black cross, indicating the fill handle.
+2.  Then, enter 2019 in the second-botton cell and select both the cells using `Shift` key from keyboard then, move the cursor to the bottom-right corner of the cell containing the value 2019. The cursor should change to a small black cross, indicating the fill handle.
 
 3. Click and drag the fill handle down to the desired end value, in this case 2023. As you drag, Excel will automatically populate the cells with the sequential years.
 

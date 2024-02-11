@@ -1,0 +1,11 @@
+CustomerID,FirstName,LastName,Email,Age,city,PostalCode,Country
+1001,John,Doe,john.doe@example.com,35,"New York",10001,USA
+1002,Jane,Smith,jane.smith@example.com,28,"Los Angeles",20002,USA
+1003,Michael,Johnson,michael.johnson@example.com,42,London,"WC1A 1AA",UK
+1004,Emily,Davis,emily.davis@example.com,29,Sydney,2000,Australia
+1005,Andrew,Wilson,andrew.wilson@example.com,37,Tokyo,100-0005,Japan
+1006,Jessica,Brown,jessica.brown@example.com,31,Paris,75001,France
+1007,William,Martinez,william.martinez@example.com,45,Berlin,10115,Germany
+1008,Olivia,Garcia,olivia.garcia@example.com,26,Toronto,"M5V 2Z5",Canada
+1009,David,Anderson,david.anderson@example.com,33,Dubai,12345,UAE
+1010,Sophia,Lopez,sophia.lopez@example.com,40,Mumbai,400001,India

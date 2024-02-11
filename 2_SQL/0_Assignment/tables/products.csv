@@ -1,0 +1,11 @@
+ProductID,ProductName,Price,InStock
+1,"Widget A",120.00,1
+2,"Gizmo X",80.50,0
+3,Thingamajig,150.00,1
+4,Doohickey,90.00,1
+5,Whatchamacallit,110.00,0
+6,"Widget B",95.00,1
+7,"Gadget Y",200.00,0
+8,"Contraption Z",180.00,1
+9,Doodad,75.00,0
+10,"Device Q",105.00,1

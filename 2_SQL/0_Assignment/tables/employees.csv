@@ -1,0 +1,11 @@
+EmployeeID,FirstName,LastName,Salary,Age,Department
+1,Shivcharan,Das,45000.00,32,Sales
+2,Krish,Naik,60000.00,35,Sales
+3,Rohit,Kapoor,75000.00,42,Marketing
+4,Ekta,Dubey,95000.00,36,Finance
+5,Shailja,Mishra,80000.00,23,Sales
+6,Hariharan,S,65000.00,25,Marketing
+7,Aman,Gupta,90000.00,45,Finance
+8,Arpit,Dubey,90800.00,26,Finance
+9,Shreya,Richharia,42000.00,27,HR
+10,Sudhanshu,Kumar,30000.00,40,Marketing

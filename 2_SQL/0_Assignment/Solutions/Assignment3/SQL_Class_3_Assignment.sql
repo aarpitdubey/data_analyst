@@ -65,9 +65,19 @@ SELECT `Phone Number`
 FROM amazon
 WHERE `Phone Number` LIKE '555%' OR `Phone Number` LIKE '(555)%';
 
+/*
+Question 5: How can you select all cities 
+that start with 'New' followed by any characters?
+*/
 
+SELECT *
+FROM `sql_class_3_assignment`.`phone_directory`;
 
+-- Solution
 
+SELECT `first_name`, `last_name`, `company_name`, `city`, `phone`
+FROM `phone_directory`
+WHERE `city` LIKE 'new%';
 
 
 

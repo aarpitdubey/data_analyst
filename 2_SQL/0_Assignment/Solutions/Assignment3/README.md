@@ -95,7 +95,7 @@ WHERE  `Phone Number` LIKE '555%';
 ```
 **Execution :**
 
-![](./img/9_half_solution_5.png)
+![](./img/9_half_solution_4.png)
 
 Here, the query working well, but have you noticed we didn't get those phone numbers whose are code were written inside the parenthesis. like `(555)`
 
@@ -108,4 +108,29 @@ WHERE `Phone Number` LIKE '555%' OR `Phone Number` LIKE '(555)%';
 ```
 **Execution :**
 
-![](./img/10_full_solution_5.png)
+![](./img/10_full_solution_4.png)
+
+### Question 5: How can you select all cities that start with 'New' followed by any characters?
+
+**Query :**
+
+```SQL
+SELECT *
+FROM `sql_class_3_assignment`.`phone_directory`;
+```
+**Execution :**
+
+![](./img/11_viewing_the_phone_directory_table.png)
+
+Now, let's filter all those cities at start with 'New' 
+
+**Query :**
+
+```SQL
+SELECT `first_name`, `last_name`, `company_name`, `city`, `phone`
+FROM `phone_directory`
+WHERE `city` LIKE 'new%';
+```
+**Execution :**
+
+![](./img/12_solution_5.png)

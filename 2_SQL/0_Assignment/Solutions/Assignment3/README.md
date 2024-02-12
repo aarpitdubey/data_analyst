@@ -44,3 +44,68 @@ WHERE ProductName LIKE '%phone%';
 **Execution :**
 
 ![Products whose name contain 'phone'](./img/5_solution_2.png)
+
+### Question 3: How can you retrieve all email addresses from a table that end with '.com'?
+
+firstly, let's look at the employee table 
+
+**Query :**
+```SQL
+SELECT *
+FROM `sql_class_3_assignment`.`employee`;
+```
+**Execution :**
+
+![](./img/6_viewing_the_employee_table.png)
+
+Here, we can see there are email addresses which contains '.com'
+
+**Query :**
+
+```SQL
+SELECT `email`
+FROM employee
+WHERE email LIKE '%.com';
+```
+**Execution :**
+
+![](./img/7_solution_3.png)
+
+### Question 4: How do you find all phone numbers that start with the area code '555'?
+
+**Query :**
+
+```SQL
+SELECT *
+FROM `sql_class_3_assignment`.`amazon`;
+```
+
+**Execution :**
+
+![](./img/8_Viewing_amazon_customer_data.png)
+
+To find out all the phone numbers that start with the area code '555' are
+
+**Query :**
+
+```SQL
+SELECT `Phone Number`
+FROM amazon
+WHERE  `Phone Number` LIKE '555%';
+```
+**Execution :**
+
+![](./img/9_half_solution_5.png)
+
+Here, the query working well, but have you noticed we didn't get those phone numbers whose are code were written inside the parenthesis. like `(555)`
+
+**Query :**
+
+```SQL
+SELECT `Phone Number`
+FROM amazon
+WHERE `Phone Number` LIKE '555%' OR `Phone Number` LIKE '(555)%';
+```
+**Execution :**
+
+![](./img/10_full_solution_5.png)

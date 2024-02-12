@@ -135,17 +135,49 @@ SELECT `phone_number`
 FROM `contacts`
 WHERE `phone_number` REGEXP '^[0-9]{3}-[0-9]{3}-[0-9]{4}$'
 
+/*
+Question 10:How do you find all records where the 'text' 
+column contains two consecutive digits?
+*/
 
+-- To view the table
+SELECT *
+FROM `sql_class_3_assignment`.`corpus`;
 
+-- Solution
+SELECT *
+FROM `corpus`
+WHERE `text` REGEXP '[0-9]{2}';
 
+--------------------------- NULL VALUES ----------------------------------------
 
+/*
+Question 1: Find all employees whose birthdates are not 
+recorded (NULL).
+*/
 
+-- To view the table
+SELECT *
+FROM `sql_class_3_assignment`.`employees`;
 
+-- Solution
+SELECT *
+FROM `employees`
+WHERE `birthdate` IS NULL;
 
-11
+/*
+Question 2: List all orders that don't have 
+a customer assigned (NULL customerID).
+*/
 
+-- To view the table customers
+SELECT * 
+FROM `sql_class_3_assignment`.`customers`;
 
-
+-- Solution
+SELECT `Order`, `OrderID`, `Country`
+FROM `customers`
+WHERE `CustomerID` IS NULL;
 
 
 

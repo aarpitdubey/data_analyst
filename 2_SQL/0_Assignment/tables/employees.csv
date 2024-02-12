@@ -1,11 +1,24 @@
-EmployeeID,FirstName,LastName,Salary,Age,Department
-1,Shivcharan,Das,45000.00,32,Sales
-2,Krish,Naik,60000.00,35,Sales
-3,Rohit,Kapoor,75000.00,42,Marketing
-4,Ekta,Dubey,95000.00,36,Finance
-5,Shailja,Mishra,80000.00,23,Sales
-6,Hariharan,S,65000.00,25,Marketing
-7,Aman,Gupta,90000.00,45,Finance
-8,Arpit,Dubey,90800.00,26,Finance
-9,Shreya,Richharia,42000.00,27,HR
-10,Sudhanshu,Kumar,30000.00,40,Marketing
+EmployeeID,FirstName,LastName,Salary,Age,birthdate, Department
+1,Shivcharan,Das,45000.00,32,1990-05-21,Sales
+2,Krish,Naik,60000.00,35,1988-12-15,Sales
+3,Rohit,Kapoor,75000.00,42,NULL, Marketing
+4,Ekta,Dubey,95000.00,36,1989-09-10,Finance
+5,Shailja,Mishra,80000.00,23,1999-09-16,Sales
+6,Hariharan,S,65000.00,25,1996-04-03,Marketing
+7,Aman,Gupta,90000.00,45,1988-05-20,Finance
+8,Arpit,Dubey,90800.00,26,NULL,Finance
+9,Shreya,Richharia,42000.00,27,1996-01-20,HR
+10,Sudhanshu,Kumar,30000.00,40,1987-08-11,Marketing
+11,John,Doe,60000,31,1990-05-21,Sales
+12,Jane,Smith,52000,25,NULL,Marketing
+13,Bob,Johnson,75000,33,1988-12-15,HR
+14,Alice,Williams,68000,26,NULL,Finance
+15,Eve,Brown,57000,28,1993-08-04,IT
+16,Michael,Davis,80000,36,1985-06-30,Operations
+17,Samantha,Clark,48000,30,NULL,PR
+18,Daniel,Wilson,62000,29,1992-09-17,Customer Service
+19,Sophia,Garcia,69000,25,NULL,Accounting
+20,Olivia,Martinez,60000,34,1987-04-22,Administration
+21,Lauren,Taylor,55000,26,1995-11-11,Sales
+22,Liam,Rodriguez,72000,40,NULL,IT
+

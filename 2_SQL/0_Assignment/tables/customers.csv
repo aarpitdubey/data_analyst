@@ -1,11 +1,30 @@
-CustomerID,FirstName,LastName,Email,Age,city,PostalCode,Country
-1001,John,Doe,john.doe@example.com,35,"New York",10001,USA
-1002,Jane,Smith,jane.smith@example.com,28,"Los Angeles",20002,USA
-1003,Michael,Johnson,michael.johnson@example.com,42,London,"WC1A 1AA",UK
-1004,Emily,Davis,emily.davis@example.com,29,Sydney,2000,Australia
-1005,Andrew,Wilson,andrew.wilson@example.com,37,Tokyo,100-0005,Japan
-1006,Jessica,Brown,jessica.brown@example.com,31,Paris,75001,France
-1007,William,Martinez,william.martinez@example.com,45,Berlin,10115,Germany
-1008,Olivia,Garcia,olivia.garcia@example.com,26,Toronto,"M5V 2Z5",Canada
-1009,David,Anderson,david.anderson@example.com,33,Dubai,12345,UAE
-1010,Sophia,Lopez,sophia.lopez@example.com,40,Mumbai,400001,India
+CustomerID,FirstName,LastName,Email,Age,city,PostalCode,Country,Address,Order,OrderID
+NULL,John,Doe,johnoe@example.com,35,New York,10001,USA,123 Oak St,Shoes,1
+1002,Jane,Smith,jane.smith@example.com,28,Los Angeles,20002,USA,456 Pine St,Furniture,2
+NULL,Michael,Johnson,michael.john@example.com,42,London,WC1A 1AA,UK,789 Elm St,Electronics,3
+1004,Emily,Davis,emily.davis@example.com,29,Sydney,2000,Australia,1010 Maple Ave,Books,4
+NULL,Andrew,Wilson,andrew.wilson@example.com,37,Tokyo,100-0005,Japan,1212 Cedar Blvd,Clothing,5
+1006,Jessica,Brown,jessica.brown@example.com,31,Paris,75001,France,1414 Ash Ln,Home Decor,6
+1007,William,Martinez,william.martinez@example,45,Berlin,10115,Germany,1616 Birch Dr,Appliances,7
+NULL,Olivia,Garcia,olivia.garcia@example.com,26,Toronto,M5V 2Z5,Canada,1818 Pinecrest,Toys,8
+1009,David,,david.anderson@example.com,33,Dubai,12345,UAE,2020 Spruce Ave,Garden Supplies,9
+1010,Sophia,Lopez,sophia.lopez@example.com,40,Mumbai,400001,India,2222 Oakwood Dr,Sports Equipment,10
+1011,Christopher,Reed,christopher.reed@example.com,39,San Francisco,94133,USA,2323 Elm St,Outdoor Gear,11
+NULL,Daniel,Griffin,daniel.griffin@example.com,36,Seattle,98101,USA,2525 Maple Ave,Pet Supplies,12
+1013,Isabella,Campbell,isabella.campbell@example.com,27,Denver,80202,USA,2626 Cedar Blvd,Stationery,13
+1014,Liam,Watsonliam.watson@example.com,30,Austin,73301,USA,2727 Birch Dr,Health & Wellness,14
+1015,Elizabeth,Parker,elizabeth.p@example.com,34,Boston,02201,USA,2828 Pinecrest,Kitchenware,15
+NULL,William,Ross,william.@example.com,41,Washington,20001,USA,2929 Spruce Ave,Beauty Products,16
+1017,Ava,Stewart,ava.stewart@example.com,32,Chicago60601,USA,3030 Oakwood Dr,Electrical Supplies,17
+1018,Aaron,Young,aaron.young.com,29,Miami,33101,USA,3131 Elm St,Automotive Parts,18
+1019,Natalie,W,natalie.wright@example.com,25,Atlanta,30301,USA,3232 Maple Ave,Music & Instruments,19
+NULL,Julian,Hernandez,julian.hernandez@example.com,38,Dallas,75201,USA,3333 Cedar Blvd,Art Supplies,20
+NULL,Abigail,Wilson,abigail.w@example.com,26,Houston,77001,USA,3434 Ash St,Home Improvement,21
+1022,Oliver,Bell,oliver.bell@example.com,29,Phoenix,85001,USA,3535 Elm Dr,Office Supplies,22
+NULL,Samantha,Wood,samantha.wood@example.com,33,Philadelphia,19102,USA,3636 Oak Ave,Electronic Accessories,23
+1024,Grace,Long,grace.long@example.com,35,Denver,80202,USA,3737 Pine St,Personal Care,24
+1025,Nathan,Coleman,nathan.coleman@example.com,40,Minneapolis,55401,USA,3838 Cedar Dr,Tools,25
+1026,Hannah,Hayes,hannah.hayes@example.com,26,Portland,97201,USA,3939 Birch St,Baby Products,26
+NULL,Landon,Wright,landon.w@example.com,31,Las Vegas,89101,USA,4040 Spruce Ave,Fitness Equipment,27
+1028,Mia,Hayes,mia.hes@example.com,24,New Orleans,70112,USA,4141 Oakwood Dr,Outdoor Clothing,28
+

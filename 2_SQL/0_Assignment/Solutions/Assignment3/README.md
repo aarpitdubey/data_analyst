@@ -237,3 +237,152 @@ WHERE `Phone_number` REGEXP '^[0-9]{3}-[0-9]{3}-[0-9]{4}$';
 **Execution :**
 
 ![](./img/20_solution_9.png)
+
+### Question 10: How do you find all records where the 'text' column contains two consecutive digits?
+
+Let's first view the table `corpus`
+
+**Query :**
+
+```SQL
+SELECT *
+FROM `sql_class_3_assignment`.`corpus`;
+```
+**Execution :**
+
+![](./img/21_viewing_text_data_table.png)
+
+Now let's solve the Question here
+
+**Query :**
+
+```SQL
+SELECT *
+FROM `corpus`
+WHERE `text` REGEXP '[0-9]{2}';
+```
+**Execution :**
+
+![](./img/22_solution_10.png)
+
+## NULL VALUES:
+
+### Question 1: Find all employees whose birthdates are not recorded (NULL).
+
+let's see the table
+
+**Query :**
+
+```SQL
+SELECT *
+FROM `sql_class_3_assignment`.`employees`;
+```
+**Execution :**
+
+![](./img/23_viewing_employess_table.png)
+
+let's solve this problem
+
+**Query :**
+
+```SQL
+SELECT *
+FROM `employees`
+WHERE `birthdate` IS NULL;
+```
+
+**Execution :**
+
+![](./img/24_solution_nullvalues_1.png)
+
+### Question 2: List all orders that don't have a customer assigned (NULL customerID).
+
+let's see the table
+
+**Query :**
+
+```SQL
+SELECT * 
+FROM `sql_class_3_assignment`.`customers`;
+```
+**Execution :**
+
+![](./img/25_viewing_customers_table.png)
+let's solve this problem
+
+**Query :**
+
+```SQL
+SELECT `Order`, `OrderID`, `Country`
+FROM `customers`
+WHERE `CustomerID` IS NULL;
+```
+**Execution :**
+
+![](./img/26_solution_nullvalues_2.png)
+
+## FUNCTIONS:
+
+- Consider a table named Sales with the following columns:
+
+    **SaleID (integer):** The unique identifier for each sale.
+
+    **Product (string):** The name of the product sold.
+
+    **Quantity (integer):** The quantity of the product sold.
+
+    **Price (decimal):** The price per unit of the product.
+
+### Question 1: Find the total quantity sold for each product.
+
+let's solve this problem
+
+**Query :**
+
+**Execution :**
+
+let's solve this problem
+
+**Query :**
+
+**Execution :**
+
+### Question 2: Calculate the total revenue generated from each product (Total Revenue = Quantity * Price).
+
+### Question 3: Determine the average price of each product.
+
+let's solve this problem
+
+**Query :**
+
+**Execution :**
+
+let's solve this problem
+
+**Query :**
+
+**Execution :**
+
+let's solve this problem
+
+**Query :**
+
+**Execution :**
+
+let's solve this problem
+
+**Query :**
+
+**Execution :**
+
+let's solve this problem
+
+**Query :**
+
+**Execution :**
+
+let's solve this problem
+
+**Query :**
+
+**Execution :**

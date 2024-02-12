@@ -1,0 +1,13 @@
+id, text, category, count
+1, This is a sample text with 123 consecutive digits, A, 5
+2, Another example with no consecutive digits, B, 3
+3, 789xyz contains consecutive digits, C, 7
+4, NoConsecutiveDigitsHere, D, 2
+5, The number 45 is present here, E, 6
+6, Only single digits in this sentence, F, 4
+7, 6789 has four consecutive digits, G, 9
+8, There are 33 reasons for this, H, 8
+9, This sentence has 678 consecutive digits, I, 1
+10, No digits in this one! J, 10
+11, PU678ZZ, K, 12
+12, ABC123DEF456, L, 15

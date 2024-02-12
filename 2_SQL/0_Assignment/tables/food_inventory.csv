@@ -1,0 +1,21 @@
+id, description, price, quantity, category, expiry_date, supplier
+1, Fresh apple, $1.00,100, Apple, 2022-10-15, ABC Farms
+2, Juicy oranges, $0.75, 150, Orange, 2022-10-10, XYZ Orchards
+3, Apple cider, $3.50, 75, Beverage, 2022-11-20, Drink Co.
+4, Sliced oranges, $2.00, 120, Orange, 2022-10-20, Harvest Farms
+5, Green apples, $1.25, 90, Apple, 2022-10-16, Green Groves
+6, Orange marmalade, $2.50, 50, Condiment, 2022-11-01, Fine Foods Inc.
+7, Red apples, $1.50, 80, Apple, 2022-10-14, Orchard Delights
+8, Orange juice, $3.00, 60, Beverage, 2022-11-25, Citrus Suppliers Ltd.
+9, Apple pie, $5.00, 25, Dessert, 2022-11-28, Sweets Bakery
+10, Candied oranges, $2.50, 100, Snack, 2022-10-30, Snack Co.
+11, Organic Apples, $1.75, 70, Apple, 2022-10-17, Organic Farms Ltd.
+12, Tangerines, $1.50, 120, Citrus, 2022-10-22, Sunnyside Plantations
+13, Apple Sauce, $2.25, 50, Condiment, 2022-11-05, Sauce Co.
+14, Orange Sorbet, $3.50, 40, Dessert, 2022-11-10, Ice Cream Emporium
+15, Dried Apples, $2.00, 90, Snack, 2022-10-31, Healthy Snacks Ltd
+16, Bananas, $0.50, 200, Banana, 2022-10-31, Tropical Farms
+17, Ripe Papayas, $2.00, 60, Papaya, 2022-11-05, Island Delights
+18, Sweet Strawberries, $3.00, 70, Strawberry, 2022-10-25, Berry Farms
+19, Fresh Mangoes, $2.50, 80, Mango, 2022-10-30, Tropicana Farms
+20, Juicy Pineapples, $2.20, 100, Pineapple, 2022-11-15, Golden Harvest

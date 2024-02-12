@@ -134,3 +134,106 @@ WHERE `city` LIKE 'new%';
 **Execution :**
 
 ![](./img/12_solution_5.png)
+
+### Question 6: How do you find all records where the value in the 'description' column contains either 'apple' or 'orange'?
+
+Firstly, view the table
+
+**Query :**
+```SQL
+SELECT *
+FROM `sql_class_3_assignment`.`food_inventory`;
+```
+**Execution :**
+
+![](./img/13_viewing_food_inventory_table.png)
+
+Records where the value in the 'description' column contains either 'apple' or 'orange'
+
+**Query :**
+
+```SQL
+SELECT *
+FROM `food_inventory`
+WHERE `description` LIKE '%apple%' OR `description` LIKE '%orange%';
+```
+**Execution :**
+
+![](./img/14_solution_6.png)
+
+### Question 7:How can you retrieve all email addresses that follow the pattern of "user@domain.com"?
+
+Let's take the `phone_directory` table and view it first.
+
+**Query :**
+
+```SQL
+SELECT *
+FROM `sql_class_3_assignment`.`phone_directory`;
+```
+**Execution :**
+
+![](./img/15_view_of_phone_directory_table.png)
+
+**Query :**
+
+```SQL
+SELECT `email`
+FROM `phone_directory`
+WHERE email LIKE '%@%.com'
+```
+
+**Execution :**
+
+![](./img/16_solution_7.png)
+
+### Question 8: How do you find all records where the 'product_code' is exactly four characters long and consists of letters and digits?
+
+Let's look the `product` table
+
+**Query :**
+
+```SQL
+SELECT *
+FROM `sql_class_3_assignment`.`product`;
+```
+**Execution :**
+
+![](./img/17_view_product_table.png)
+
+lets solve the problem using REGEXP 
+
+**Query :**
+
+```SQL
+SELECT *
+FROM `product`
+WHERE `product_code` REGEXP '^[a-zA-Z0-9]{4}$'
+```
+**Execution :**
+
+![](./img/18_solution_8.png)
+### Question 9: How can you retrieve all phone numbers that match the pattern '###-###-####'?
+
+**Query :**
+
+```SQL
+SELECT *
+FROM `sql_class_3_assignment`.`contacts`;
+```
+**Execution :**
+
+![](./img/19_view_contact_table.png)
+
+lets solve the problem using REGEXP
+
+**Query :**
+
+```SQL
+SELECT `Phone_number`
+FROM `contacts`
+WHERE `Phone_number` REGEXP '^[0-9]{3}-[0-9]{3}-[0-9]{4}$';
+```
+**Execution :**
+
+![](./img/20_solution_9.png)

@@ -69,15 +69,74 @@ WHERE `Phone Number` LIKE '555%' OR `Phone Number` LIKE '(555)%';
 Question 5: How can you select all cities 
 that start with 'New' followed by any characters?
 */
+-- to view table
+SELECT *
+FROM `sql_class_3_assignment`.`phone_directory`;
+
+-- Solution
+SELECT `first_name`, `last_name`, `company_name`, `city`, `phone`
+FROM `phone_directory`
+WHERE `city` LIKE 'new%';
+
+/*
+Question 6: How do you find all records where the value in the
+'description' column contains either 'apple' or 'orange'?
+*/
+
+-- To view the table
+SELECT *
+FROM `sql_class_3_assignment`.`food_inventory`;
+
+-- Solution
+SELECT *
+FROM `food_inventory`
+WHERE `description` LIKE '%apple%' OR `description` LIKE '%orange%';
+
+/*
+Question 7:How can you retrieve all email addresses 
+that follow the pattern of "user@domain.com"?
+*/
+
+-- To view TABLE
 
 SELECT *
 FROM `sql_class_3_assignment`.`phone_directory`;
 
 -- Solution
-
-SELECT `first_name`, `last_name`, `company_name`, `city`, `phone`
+SELECT `email`
 FROM `phone_directory`
-WHERE `city` LIKE 'new%';
+WHERE email LIKE '%@%.com'
+
+/*
+Question 8: How do you find all records where the 'product_code' 
+is exactly four characters long and consists of letters and digits?
+*/
+
+-- to view the TABLE
+SELECT *
+FROM `sql_class_3_assignment`.`product`;
+
+-- Solution
+SELECT *
+FROM `product`
+WHERE `product_code` REGEXP '^[a-zA-Z0-9]{4}$'
+
+/*
+Question 9:How can you retrieve all phone numbers 
+that match the pattern '###-###-####'?
+*/
+
+-- To view the table
+SELECT *
+FROM `contacts`;
+
+-- Solution
+SELECT `phone_number`
+FROM `contacts`
+WHERE `phone_number` REGEXP '^[0-9]{3}-[0-9]{3}-[0-9]{4}$'
+
+
+
 
 
 

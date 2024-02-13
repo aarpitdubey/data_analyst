@@ -715,31 +715,119 @@ LIMIT 1;
 SELECT`ProductName`
 FROM `sql_class_3_assignment`.`sales`
 GROUP BY `ProductName`
- ORDER BY SUM(`QuantitySold`) DESC
+ORDER BY SUM(`QuantitySold`) DESC
 LIMIT 1;
 ```
 **Execution :**
 
 ![](./img/50_Solution_GROUPBY_HAVING_ORDERBY_6.png)
+
+### Question 7: Consider a table named Students with the following columns:
+
+**StudentID (integer):** The unique identifier for each student.
+
+**Course (string):** The course name.
+
+**Score (integer):** The score obtained by the student in the course.
+
+### Write an SQL query to find the top three students with the highest average score across all courses.
 **Query :**
 
+```SQL
+SELECT `StudentID`, `Course`, AVG(Score) AS `Average Score`
+FROM `sql_class_3_assignment`.`student_s`
+GROUP BY `StudentID`, `Course`
+ORDER BY `Average Score` DESC
+LIMIT 3;
+```
 **Execution :**
 
+![](./img/51_Solution_GROUPBY_HAVING_ORDERBY_7.png)
+
+### Question 8: Consider a table named Orders with the following columns:
+   
+   **OrderID (integer):** The unique identifier for each order.
+   
+   **CustomerID (integer):** The unique identifier for each customer.
+   
+   **TotalAmount (decimal):** The total amount of the order.
+
+### Write an SQL query to find the total amount of orders placed by each customer, ordered in descending order of total amount.
 **Query :**
 
+```SQL
+SELECT `CustomerID`, `CustomerName`, SUM(`TotalAmount`) AS `TotalAmountOfOrders`
+FROM `sql_class_3_assignment`.`orders`
+GROUP BY `CustomerID`, `CustomerName`
+ORDER BY `TotalAmountOfOrders` DESC;
+```
 **Execution :**
 
+![](./img/52_Solution_GROUPBY_HAVING_ORDERBY_8.png)
+
+### Question 9: Consider a table named Books with the following columns:
+
+**BookID (integer):** The unique identifier for each book.
+
+**Author (string):** The author of the book.
+
+**PublicationYear (integer):** The year the book was published.
+
+### Write an SQL query to find the number of books published by each author in descending order of the count.
 **Query :**
 
+```SQL
+SELECT `Author`, COUNT(`BookID`) AS `NumberOfBooks`
+FROM `sql_class_3_assignment`.`books`
+GROUP BY `Author`
+ORDER BY `NumberOfBooks` DESC;
+```
 **Execution :**
 
+![](./img/53_Solution_GROUPBY_HAVING_ORDERBY_9.png)
+
+### Question 8: Consider a table named Orders with the following columns:
+   
+   **OrderID (integer):** The unique identifier for each order.
+   
+   **CustomerID (integer):** The unique identifier for each customer.
+   
+   **TotalAmount (decimal):** The total amount of the order.
+### Write an SQL query to find the customer IDs of customers who have placed orders with a total amount greater than $1,000 and have placed at least two orders.
 **Query :**
 
+```SQL
+SELECT `CustomerID`, `CustomerName`
+FROM `sql_class_3_assignment`.`orders`
+GROUP BY `CustomerID`, `CustomerName`
+HAVING SUM(`TotalAmount`) > 1000 and COUNT(`OrderID`) >= 2;
+```
 **Execution :**
 
+![](./img/54_Solution_GROUPBY_HAVING_ORDERBY_10.png)
+
+### Question 11: Consider a table named Products with the following columns:
+
+**ProductID (integer):** The unique identifier for each product.
+
+**Category (string):** The category of the product.
+
+**Price (decimal):** The price of the product.
+
+### Write an SQL query to find the average price of products in each category, ordered by category name in ascending order.
 **Query :**
 
+```SQL
+SELECT `Category`,AVG(`Price`) AS AveragePrice
+FROM `sql_class_3_assignment`.`product_s`
+GROUP BY `Category`
+ORDER BY `Category`;
+```
 **Execution :**
+
+![](./img/55_Solution_GROUPBY_HAVING_ORDERBY_11.png)
+
+
 **Query :**
 
 **Execution :**

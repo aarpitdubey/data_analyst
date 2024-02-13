@@ -453,6 +453,17 @@ Write an SQL query to find the top three students with the highest average score
 all courses.
 */
 
+-- To view table
+SELECT *
+FROM `sql_class_3_assignment`.`student_s`;
+
+-- Solution
+SELECT `StudentID`, `Course`, AVG(Score) AS `Average Score`
+FROM `sql_class_3_assignment`.`student_s`
+GROUP BY `StudentID`, `Course`
+ORDER BY `Average Score` DESC
+LIMIT 3;
+
 /*
 Question 8:Consider a table named Orders with the following columns:
 OrderID (integer): The unique identifier for each order.
@@ -463,6 +474,15 @@ Write an SQL query to find the total amount of orders placed by each customer, o
 in descending order of total amount.
 */
 
+-- To view table
+SELECT *
+FROM `sql_class_3_assignment`.`orders`;
+
+-- Solution
+SELECT `CustomerID`, `CustomerName`, SUM(`TotalAmount`) AS `TotalAmountOfOrders`
+FROM `sql_class_3_assignment`.`orders`
+GROUP BY `CustomerID`, `CustomerName`
+ORDER BY `TotalAmountOfOrders` DESC;
 /*
 Question 9: Consider a table named Books with the following columns:
 BookID (integer): The unique identifier for each book.
@@ -472,6 +492,15 @@ Write an SQL query to find the number of books published by each author in
 descending order of the count.
 */
 
+-- To view table
+SELECT *
+FROM `sql_class_3_assignment`.`books`;
+
+-- Solution
+SELECT `Author`, COUNT(`BookID`) AS `NumberOfBooks`
+FROM `sql_class_3_assignment`.`books`
+GROUP BY `Author`
+ORDER BY `NumberOfBooks` DESC;
 /*
 Question 10: Consider a table named Orders with the following columns:
 OrderID (integer): The unique identifier for each order.
@@ -482,6 +511,16 @@ Write an SQL query to find the customer IDs of customers who have placed orders 
 a total amount greater than $1,000 and have placed at least two orders.
 */
 
+-- To view TABLE
+SELECT *
+FROM `sql_class_3_assignment`.`orders`;
+
+-- Solution
+SELECT `CustomerID`, `CustomerName`
+FROM `sql_class_3_assignment`.`orders`
+GROUP BY `CustomerID`, `CustomerName`
+HAVING SUM(`TotalAmount`) > 1000 and COUNT(`OrderID`) >= 2;
+
 /*
 Question 11: Consider a table named Products with the following columns:
 ProductID (integer): The unique identifier for each product.
@@ -491,6 +530,15 @@ Write an SQL query to find the average price of products in each category, order
 category name in ascending order.
 */
 
+-- to view TABLE
+SELECT *
+FROM `sql_class_3_assignment`.`product_s`;
+
+-- Solution
+SELECT `Category`,AVG(`Price`) AS AveragePrice
+FROM `sql_class_3_assignment`.`product_s`
+GROUP BY `Category`
+ORDER BY `Category`;
 /*
 Question 12: Consider a table named Employees with the following columns:
 EmployeeID (integer): The unique identifier for each employee.

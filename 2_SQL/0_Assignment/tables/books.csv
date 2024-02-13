@@ -1,1 +1,21 @@
-BookID,Title,ISBN
+BookID,Author,PublicationYear
+1,JK Rowling,2005
+2,JK Rowling,2007
+3,Stephen King,1999
+4,Agatha Christie,1940
+5,JRR Tolkien,1954
+6,Stephen King,1987
+7,Stephen King,1995
+8,JK Rowling,2003
+9,Dan Brown,2001
+10,Dan Brown,2003
+11,Agatha Christie,1926
+12,Agatha Christie,1939
+13,JRR Tolkien,1937
+14,Dan Brown,2009
+15,JRR Tolkien,1949
+16,Stephen King,2018
+17,Dan Brown,2005
+18,Agatha Christie,1950
+19,JRR Tolkien,1955
+20,JK Rowling,2010

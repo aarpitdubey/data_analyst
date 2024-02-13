@@ -586,6 +586,8 @@ WHERE DATEDIFF(`DeliveryDate`, `OrderDate`) = 0;
 
 ![](./img/44_solution_function_para3_6.png)
 
+## GROUP BY, HAVING, ORDER BY
+
 ### Question 1: Consider a table named Orders with the following columns:
    
    **OrderID (integer):** The unique identifier for each order.

@@ -1,11 +1,21 @@
-ProductID,ProductName,Price,InStock
-1,"Widget A",120.00,1
-2,"Gizmo X",80.50,0
-3,Thingamajig,150.00,1
-4,Doohickey,90.00,1
-5,Whatchamacallit,110.00,0
-6,"Widget B",95.00,1
-7,"Gadget Y",200.00,0
-8,"Contraption Z",180.00,1
-9,Doodad,75.00,0
-10,"Device Q",105.00,1
+ProductID,ProductName,Price,CustomerID,CustomerName,InStock
+1,Shoes,75.00,1001,John Doe,1
+2,Headphones,30.00,1005,Andrew Wilson,1
+3,TV,450.00,1004,Emily Davis,0
+4,Smartphone,300.00,1009,David Anderson,1
+5,Smartwatch,150.00,1006,Jessica Brown,1
+6,Laptop,850.00,1002,Jane Smith,0
+7,Speaker,100.00,1007,William Martinez,1
+8,Desk,200.00,1003,Michael Johnson,1
+9,Chair,75.00,1008,Olivia Garcia,0
+10,Tablet,400.00,1010,Sophia Lopez,1
+11,Watch,200.00,1001,John Doe,1
+12,Keyboard,50.00,1004,Emily Davis,0
+13,Mouse,20.00,1002,Jane Smith,1
+14,Monitor,300.00,1006,Jessica Brown,1
+15,Printer,150.00,1008,Olivia Garcia,0
+16,Router,80.00,1003,Michael Johnson,1
+17,Speaker,500.00,1005,Andrew Wilson,1
+18,External Hard Drive,120.00,1007,William Martinez,0
+19,Camera,700.00,1009,David Anderson,1
+20,Table,180.00,1010,Sophia Lopez,1

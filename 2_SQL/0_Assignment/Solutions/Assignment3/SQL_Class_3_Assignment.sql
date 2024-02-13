@@ -149,7 +149,7 @@ SELECT *
 FROM `corpus`
 WHERE `text` REGEXP '[0-9]{2}';
 
---------------------------- NULL VALUES ----------------------------------------
+--------------------------------------- NULL VALUES ----------------------------------------
 
 /*
 Question 1: Find all employees whose birthdates are not 
@@ -179,13 +179,90 @@ SELECT `Order`, `OrderID`, `Country`
 FROM `customers`
 WHERE `CustomerID` IS NULL;
 
+------------------------------------ FUNCTIONS -------------------------------------
 
+/* Consider a table named Sales with the following columns:
 
+    SaleID (integer): The unique identifier for each sale.
 
+    Product (string): The name of the product sold.
 
+    Quantity (integer): The quantity of the product sold.
 
+    Price (decimal): The price per unit of the product. */
 
+/*
+Question 1: Find the total quantity sold for each product.
+*/
+-- To view the table
+SELECT *
+FROM `sql_class_3_assignment`.`sales`;
 
+-- Solution
+SELECT `Product`, SUM(Quantity) AS `Total Quantity Sold`
+FROM `sql_class_3_assignment`.`sales`
+GROUP BY `Product`;
+
+/*
+Question 2: Calculate the total revenue generated from each product
+(Total Revenue = Quantity * Price).
+*/
+-- Solution
+SELECT `Product`, `Price`, SUM(Quantity) AS 'Total Quantity Sold', SUM(Quantity * Price) AS `Total Revenue`
+FROM `sql_class_3_assignment`.`sales`
+GROUP BY `Product`, `Price`;
+
+/*
+Question 3: Determine the average price of each product.
+*/
+-- Solution
+SELECT  `Product`, AVG(`Price`) AS 'Average Price'
+FROM `sql_class_3_assignment`.`sales`
+GROUP BY `Product`;
+
+--Question 4: Find the product with the highest total revenue
+-- (Quantity * Price)
+--Solution
+SELECT `Product`, `Price`, SUM(`Quantity` * `Price`) AS `Total Quantity Sold`
+FROM `sql_class_3_assignment`.`sales`
+GROUP BY `Product`, `Price`
+ORDER BY `Total Quantity Sold` DESC
+LIMIT 1;
+
+/*
+Question 5: Calculate the total quantity sold across all products.
+*/
+-- Solution
+SELECT SUM(Quantity) AS OverAllQuantitySold
+FROM `sql_class_3_assignment`.`sales`;
+
+/*
+Question 6: Determine the average price of all products.
+*/
+-- Solution
+SELECT AVG(`Price`) AS `OverALLAveragePrice`
+FROM `SQL_class_3_assignment`.`sales`;
+
+/*
+Question 1: Determine the square root of the price for each product.
+*/
+
+-- To view the table
+SELECT *
+FROM `sql_class_3_assignment`.`products`;
+
+-- Solution
+SELECT `ProductName`, `Price`, SQRT(`Price`) AS `Square Root`
+FROM `sql_class_3_assignment`.`products`
+GROUP BY `ProductName`, `Price`;
+
+/*
+Question 2: Find the ceiling 
+(smallest integer greater than or equal to) of the prices.
+*/
+
+--Solution
+SELECT `ProductName`, `Price`, CEIL(`Price`) AS ``
 
 
 

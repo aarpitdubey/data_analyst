@@ -335,23 +335,164 @@ WHERE `CustomerID` IS NULL;
 
 ### Question 1: Find the total quantity sold for each product.
 
+let's view `sales` table
+
+**Query :**
+
+```SQL
+-- To view the table
+SELECT *
+FROM `sql_class_3_assignment`.`sales`;
+```
+**Execution :**
+
+![](./img/27_view_sales_table.png)
+
 let's solve this problem
 
 **Query :**
 
+```SQL
+-- Solution
+SELECT `Product`, SUM(Quantity) AS `Total_Qty_Sold`
+FROM `sql_class_3_assignment`.`sales`
+GROUP BY `Product`;
+```
 **Execution :**
 
-let's solve this problem
-
-**Query :**
-
-**Execution :**
+![](./img/28_solution_function_1.png)
 
 ### Question 2: Calculate the total revenue generated from each product (Total Revenue = Quantity * Price).
 
+**Query :**
+
+```SQL
+SELECT `Product`, `Price`, SUM(Quantity) AS 'Total Quantity Sold', SUM(Quantity * Price) AS `Total Revenue`
+FROM `sql_class_3_assignment`.`sales`
+GROUP BY `Product`, `Price`;
+```
+**Execution :**
+
+![](./img/29_solution_function_2.png)
+
 ### Question 3: Determine the average price of each product.
 
-let's solve this problem
+**Query :**
+
+```SQL
+SELECT `Product`, AVG(`Price`) AS 'Average Price'
+FROM `sql_class_3_assignment`.`sales`
+GROUP BY `Price`;
+```
+**Execution :**
+
+![](./img/30_solution_function_3.png)
+
+### Question 4: Find the product with the highest total revenue (Quantity * Price)
+
+**Query :**
+
+```SQL
+SELECT `Product`, `Price`, SUM(`Quantity` * `Price`) AS `Total Quantity Sold`
+FROM `sql_class_3_assignment`.`sales`
+GROUP BY `Product`, `Price`
+ORDER BY `Total Quantity Sold` DESC
+LIMIT 1;
+```
+
+**Execution :**
+
+![](./img/33_solution-function_para1_4.png)
+### Question 5: Calculate the total quantity sold across all products.
+
+**Query :**
+
+```SQL
+-- Solution
+SELECT SUM(Quantity) AS OverAllQuantitySold
+FROM `sql_class_3_assignment`.`sales`;
+```
+**Execution :**
+
+![](./img/34_solution_function_para1_5.png)
+### Question 6: Determine the average price of all products.
+
+**Query :**
+
+```SQL
+SELECT AVG(`Price`) AS `OverALLAveragePrice`
+FROM `SQL_class_3_assignment`.`sales`;
+```
+**Execution :**
+
+![](./img/35_solution_function_para1_6.png)
+- Consider a table named Products with the following columns:
+
+    **ProductID (integer):** The unique identifier for each product.
+
+    **ProductName (string):** The name of the product.
+
+    **Price (decimal):** The price of the product.
+
+### Question 1: Determine the square root of the price for each product.
+
+let's view `products` table
+
+**Query :**
+
+```SQL
+-- To view the table
+SELECT *
+FROM `sql_class_3_assignment`.`products`;
+```
+**Execution :**
+
+![](./img/31_view_products_table.png)
+
+**Query :**
+
+```SQL
+-- Solution
+SELECT `ProductName`, `Price`, SQRT(`Price`) AS `Square Root`
+FROM `sql_class_3_assignment`.`products`
+GROUP BY `ProductName`, `Price`;
+```
+
+**Execution :**
+
+![](./img/32_solution_function_2para_1.png)
+
+### Question 2: Find the ceiling (smallest integer greater than or equal to) of the prices.
+
+**Query :**
+
+```SQL
+
+```
+
+**Execution :**
+
+### Question 3: Calculate the floor (largest integer less than or equal to) of the prices.
+
+**Query :**
+
+```SQL
+
+```
+
+**Execution :**
+
+let's view `products` table
+
+**Query :**
+
+```SQL
+
+```
+
+**Execution :**
+
+let's view `sales` table
 
 **Query :**
 
@@ -363,19 +504,7 @@ let's solve this problem
 
 **Execution :**
 
-let's solve this problem
-
-**Query :**
-
-**Execution :**
-
-let's solve this problem
-
-**Query :**
-
-**Execution :**
-
-let's solve this problem
+let's view `sales` table
 
 **Query :**
 

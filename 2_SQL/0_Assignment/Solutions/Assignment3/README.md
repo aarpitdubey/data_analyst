@@ -633,23 +633,94 @@ HAVING SUM(`QuantitySold`) > 100 AND COUNT(DISTINCT `SaleDate`) >= 3;
 
 ![](./img/46_Solution_GROUPBY_HAVING_ORDERBY_2.png)
 
+### Question 3:Consider a table named Employees with the following columns:
+
+**EmployeeID (integer):** The unique identifier for each employee.
+
+**Department (string):** The department in which the employee works.
+
+**Salary (decimal):** The salary of the employee.
+
+### Write an SQL query to find the average salary of employees in each department, but only for departments where the average salary is greater than $60,000.
 
 **Query :**
 
+```SQL
+SELECT `Department`, AVG(Salary) AS `Average Salary`
+FROM `sql_class_3_assignment`.`employee_s`
+GROUP BY `Department`
+HAVING AVG(Salary) > 60000
+```
 **Execution :**
+
+![](./img/47_Solution_GROUPBY_HAVING_ORDERBY_3.png)
+
+### Question 4:Consider a table named Students with the following columns:
+
+**StudentID (integer):** The unique identifier for each student.
+
+**Course (string):** The course name.
+
+**Score (integer):** The score obtained by the student in the course.
+
+### Write an SQL query to find the course names in which the average score of all students is greater than or equal to 80.
 
 **Query :**
 
+```SQL
+SELECT `Course`, AVG(Score) AS `Average Score`
+FROM `sql_class_3_assignment`.`student_s`
+GROUP BY `Course`
+HAVING AVG(`Score`) >= 80;
+```
 **Execution :**
 
+![](./img/48_Solution_GROUPBY_HAVING_ORDERBY_4.png)
+
+### Question 5: Consider a table named Employees with the following columns:
+
+**EmployeeID (integer):** The unique identifier for each employee.
+
+**Department (string):** The department in which the employee works.
+
+**Salary (decimal):** The salary of the employee.
+
+### Write an SQL query to find the department with the highest average salary.
 **Query :**
 
+```SQL
+-- Solution
+SELECT `Department` 
+FROM `sql_class_3_assignment`.`employee_s`
+GROUP BY `Department`
+ORDER BY AVG(`Salary`) DESC
+LIMIT 1;
+```
 **Execution :**
 
+![](./img/49_Solution_GROUPBY_HAVING_ORDERBY_5.png)
+
+### Question 6: Consider a table named Sales with the following columns:
+
+**ProductID (integer):** The unique identifier for each product.
+    
+**SaleDate (date):** The date of the sale.
+    
+**QuantitySold (integer):** The quantity of the product sold on that date.
+
+### Write an SQL query to find the product with the highest total quantity sold.
 **Query :**
 
+```SQL
+SELECT`ProductName`
+FROM `sql_class_3_assignment`.`sales`
+GROUP BY `ProductName`
+ ORDER BY SUM(`QuantitySold`) DESC
+LIMIT 1;
+```
 **Execution :**
 
+![](./img/50_Solution_GROUPBY_HAVING_ORDERBY_6.png)
 **Query :**
 
 **Execution :**

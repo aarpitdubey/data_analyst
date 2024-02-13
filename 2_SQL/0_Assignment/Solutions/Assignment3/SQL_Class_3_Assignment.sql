@@ -377,6 +377,16 @@ Write an SQL query to find the average salary of employees in each department, b
 only for departments where the average salary is greater than $60,000.
 */
 
+-- To view table
+SELECT *
+FROM `sql_class_3_assignment`.`employee_s`;
+
+-- Solution
+SELECT `Department`, AVG(Salary) AS `Average Salary`
+FROM `sql_class_3_assignment`.`employee_s`
+GROUP BY `Department`
+HAVING AVG(Salary) > 60000;
+
 /*
 Question 4:Consider a table named Students with the following columns:
 StudentID (integer): The unique identifier for each student.
@@ -386,6 +396,16 @@ Write an SQL query to find the course names in which the average score of all st
 is greater than or equal to 80.
 */
 
+-- To view table
+SELECT *
+FROM `sql_class_3_assignment`.`student_s`;
+
+-- Solution
+SELECT `Course`, AVG(Score) AS `Average Score`
+FROM `sql_class_3_assignment`.`student_s`
+GROUP BY `Course`
+HAVING AVG(`Score`) >= 80;
+
 /*
 Question 5: Consider a table named Employees with the following columns:
 EmployeeID (integer): The unique identifier for each employee.
@@ -394,6 +414,17 @@ Salary (decimal): The salary of the employee.
 Write an SQL query to find the department with the highest average salary.
 */
 
+-- To view TABLE
+SELECT *
+FROM `sql_class_3_assignment`.`employee_s`;
+
+-- Solution
+SELECT `Department` 
+FROM `sql_class_3_assignment`.`employee_s`
+GROUP BY `Department`
+ORDER BY AVG(`Salary`) DESC
+LIMIT 1;
+
 /*
 Question 6: Consider a table named Sales with the following columns:
 ProductID (integer): The unique identifier for each product.
@@ -401,6 +432,17 @@ SaleDate (date): The date of the sale.
 QuantitySold (integer): The quantity of the product sold on that date.
 Write an SQL query to find the product with the highest total quantity sold.
 */
+
+-- To view table
+SELECT *
+FROM `sql_class_3_assignment`.`sales`;
+
+-- Solution
+SELECT`ProductName`
+FROM `sql_class_3_assignment`.`sales`
+GROUP BY `ProductName`
+ ORDER BY SUM(`QuantitySold`) DESC
+LIMIT 1;
 
 /*
 Question 7: Consider a table named Students with the following columns:

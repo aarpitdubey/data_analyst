@@ -547,6 +547,16 @@ Salary (decimal): The salary of the employee.
 Write an SQL query to find the department(s) with the lowest average salary.
 */
 
+
+-- To view table
+SELECT *
+FROM `sql_class_3_assignment`.`employee_s`;
+
+-- Solution
+SELECT `Department`,AVG(`Salary`) AS AverageSalary
+FROM `sql_class_3_assignment`.`employee_s`
+GROUP BY `Department`
+ORDER BY AVG(`Salary`) ASC;
 /*
 Question 13: Consider a table named Orders with the following columns:
 OrderID (integer): The unique identifier for each order.
@@ -558,6 +568,16 @@ a total amount greater than $500 in the year 2023, ordered by customer ID in asc
 order.
 */
 
+-- To view table 
+SELECT *
+FROM `sql_class_3_assignment`.`orders`;
+
+-- Solution
+SELECT `CustomerID`, `CustomerName`, YEAR(`OrderDate`) AS `RequiredYear`
+FROM `sql_class_3_assignment`.`orders`
+GROUP BY `CustomerID`, `CustomerName`, `RequiredYear`
+HAVING SUM(`TotalAmount`) > 500 AND RequiredYear = 2023;
+
 /*
 Question 14: Consider a table named Students with the following columns:
 StudentID (integer): The unique identifier for each student.
@@ -566,6 +586,18 @@ Score (integer): The score obtained by the student in the course.
 Write an SQL query to find the course names in which the highest score achieved by
 any student is greater than or equal to 90, ordered by course name in ascending order.
 */
+
+-- To view table
+SELECT *
+FROM `sql_class_3_assignment`.`student_s`;
+
+-- Solution
+SELECT `Course`, MAX(`Score`) AS `max_score`
+FROM `sql_class_3_assignment`.`student_s`
+GROUP BY `Course`
+HAVING `max_score` >= 90
+ORDER BY `Course` ASC;
+
 
 /*
 Question 15: Consider a table named Orders with the following columns:
@@ -578,6 +610,18 @@ a total amount greater than $500 in the year 2023 and have placed at least two o
 in that year.
 */
 
+
+-- to view table
+SELECT *
+FROM `sql_class_3_assignment`.`orders`
+
+-- Solution
+SELECT `CustomerID`, `ProductName`
+FROM `sql_class_3_assignment`.`orders`
+WHERE EXTRACT(YEAR FROM `OrderDate`)=2023
+GROUP BY `CustomerID`, `ProductName`
+HAVING SUM(`TotalAmount`) > 500 AND COUNT(`OrderID`) >= 2;
+
 /*
 Question 16: Consider a table named Students with the following columns:
 StudentID (integer): The unique identifier for each student.
@@ -587,6 +631,15 @@ Write an SQL query to find the course names where the average score of students 
 scored less than 70 in at least one course is greater than or equal to 80.
 */
 
+-- To view table
+SELECT *
+FROM `sql_class_3_assignment`.`student_s`;
+
+-- Solution
+SELECT `Course`
+FROM `sql_class_3_assignment`.`student_s`
+GROUP BY `Course`
+HAVING COUNT(CASE WHEN Score < 70 THEN 1 ELSE NULL END) > 0 AND AVG(Score) >= 80;
 /*
 Question 17:Consider a table named Employees with the following columns:
 EmployeeID (integer): The unique identifier for each employee.
@@ -596,6 +649,15 @@ Write an SQL query to find the departments where the highest salary is greater t
 $80,000 and the total number of employees in that department is at least 5.
 */
 
+-- To view table
+SELECT *
+FROM `sql_class_3_assignment`.`employee_s`;
+
+-- Solution
+SELECT `Department`
+FROM `sql_class_3_assignment`.`employee_s`
+GROUP BY `Department`
+HAVING MAX(`Salary`) > 80000 AND COUNT(`EmployeeID`) >= 5;
 /*
 Question 18: Consider a table named Products with the following columns:
 ProductID (integer): The unique identifier for each product.
@@ -605,6 +667,18 @@ Write an SQL query to find the categories where the average price of products is
 greater than or equal to $50, and the maximum price within that category is greater than
 $100.
 */
+
+-- To view table
+SELECT *
+FROM `sql_class_3_assignment`.`product_s`
+
+-- Solution
+SELECT `Category`
+FROM `sql_class_3_assignment`.`product_s`
+GROUP BY `Category`
+HAVING AVG(`Price`) >= 50 AND MAX(`Price`) > 100;
+
+
 
 /*
 Question 19: Consider a table named Orders with the following columns:
@@ -616,3 +690,13 @@ Write an SQL query to find the customer IDs of customers who have placed orders 
 a total amount greater than $1,000 in any single order and have placed orders on at
 least three different dates.
 */
+
+-- To view table
+SELECT *
+FROM `sql_class_3_assignment`.`orders`;
+
+-- Solution
+SELECT `CustomerID`
+FROM `sql_class_3_assignment`.`orders`
+GROUP BY `CustomerID`
+HAVING MAX(`TotalAmount`) AND COUNT(DISTINCT `OrderDate`) >= 3;

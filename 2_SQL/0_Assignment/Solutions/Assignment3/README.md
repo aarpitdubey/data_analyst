@@ -827,108 +827,189 @@ ORDER BY `Category`;
 
 ![](./img/55_Solution_GROUPBY_HAVING_ORDERBY_11.png)
 
+### Question 12: Consider a table named Employees with the following columns:
+
+**EmployeeID (integer):** The unique identifier for each employee.
+
+**Department (string):** The department in which the employee works.
+
+**Salary (decimal):** The salary of the employee.
+
+### Write an SQL query to find the department(s) with the lowest average salary.
 
 **Query :**
 
+```SQL
+-- Solution
+SELECT `Department`,AVG(`Salary`) AS AverageSalary
+FROM `sql_class_3_assignment`.`employee_s`
+GROUP BY `Department`
+ORDER BY AVG(`Salary`) ASC;
+```
 **Execution :**
-**Query :**
 
-**Execution :**
-**Query :**
+![](./img/56_Solution_GROUPBY_HAVING_ORDERBY_12.png)
 
-**Execution :**
-**Query :**
+### Question 13: Consider a table named Orders with the following columns:
 
-**Execution :**
-**Query :**
+**OrderID (integer):** The unique identifier for each order.
 
-**Execution :**
-**Query :**
+**CustomerID (integer):** The unique identifier for each customer.
 
-**Execution :**
-**Query :**
+**OrderDate (date):** The date of the order.
 
-**Execution :**
-**Query :**
+**TotalAmount (decimal):** The total amount of the order.
 
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
+### Write an SQL query to find the customer IDs of customers who have placed orders with a total amount greater than $500 in the year 2023, ordered by customer ID in ascending order.
 
 **Query :**
 
+```SQL
+SELECT `CustomerID`, `CustomerName`, YEAR(`OrderDate`) AS `RequiredYear`
+FROM `sql_class_3_assignment`.`orders`
+GROUP BY `CustomerID`, `CustomerName`, `RequiredYear`
+HAVING SUM(`TotalAmount`) > 500 AND RequiredYear = 2023;
+```
 **Execution :**
+
+![](./img/57_Solution_GROUPBY_HAVING_ORDERBY_13.png)
+
+### Question 14: Consider a table named Students with the following columns:
+
+**StudentID (integer):** The unique identifier for each student.
+
+**Course (string):** The course name.
+
+**Score (integer):** The score obtained by the student in the course.
+### Write an SQL query to find the course names in which the highest score achieved by any student is greater than or equal to 90, ordered by course name in ascending order
+
 **Query :**
 
+```SQL
+SELECT `Course`, MAX(`Score`) AS `max_score`
+FROM `sql_class_3_assignment`.`student_s`
+GROUP BY `Course`
+HAVING `max_score` >= 90
+ORDER BY `Course` ASC;
+```
 **Execution :**
+
+![](./img/58_Solution_GROUPBY_HAVING_ORDERBY_14.png)
+
+### Question 15: Consider a table named Orders with the following columns:
+
+**OrderID (integer):** The unique identifier for each order.
+
+**CustomerID (integer):** The unique identifier for each customer.
+
+**OrderDate (date):** The date of the order.
+
+**TotalAmount (decimal):** The total amount of the order.
+### Write an SQL query to find the customer IDs of customers who have placed orders with a total amount greater than $500 in the year 2023 and have placed at least two orders
+in that year.
 **Query :**
 
+```SQL
+SELECT `CustomerID`, `ProductName`
+FROM `sql_class_3_assignment`.`orders`
+WHERE EXTRACT(YEAR FROM `OrderDate`)=2023
+GROUP BY `CustomerID`, `ProductName`
+HAVING SUM(`TotalAmount`) > 500 AND COUNT(`OrderID`) >= 2;
+```
 **Execution :**
+
+![](./img/59_Solution_GROUPBY_HAVING_ORDERBY_15.png)
+
+### Question 16: Consider a table named Students with the following columns:
+
+**StudentID (integer):** The unique identifier for each student.
+
+**Course (string):** The course name.
+
+**Score (integer):** The score obtained by the student in the course.
+### Write an SQL query to find the course names where the average score of students who scored less than 70 in at least one course is greater than or equal to 80.
+**Query :**
+
+```SQL
+SELECT `Course`
+FROM `sql_class_3_assignment`.`student_s`
+GROUP BY `Course`
+HAVING COUNT(CASE WHEN Score < 70 THEN 1 ELSE NULL END) > 0 AND AVG(Score) >= 80;
+```
+**Execution :**
+
+![](./img/60_Solution_GROUPBY_HAVING_ORDERBY_16.png)
+
+### Question 17: Consider a table named Employees with the following columns:
+
+**EmployeeID (integer):** The unique identifier for each employee.
+
+**Department (string):** The department in which the employee works.
+
+**Salary (decimal):** The salary of the employee.
+### Write an SQL query to find the departments where the highest salary is greater than $80,000 and the total number of employees in that department is at least 5.
+**Query :**
+
+```SQL
+SELECT `Department`
+FROM `sql_class_3_assignment`.`employee_s`
+GROUP BY `Department`
+HAVING MAX(`Salary`) > 80000 AND COUNT(`EmployeeID`) >= 5;
+```
+**Execution :**
+
+![](./img/61_Solution_GROUPBY_HAVING_ORDERBY_17.png)
+
+### Question 18: Consider a table named Products with the following columns:
+
+**ProductID (integer):** The unique identifier for each product.
+
+**Category (string):** The category of the product.
+
+**Price (decimal):** The price of the product.
+### Write an SQL query to find the categories where the average price of products is greater than or equal to $50, and the maximum price within that category is greater than $100.
+**Query :**
+
+```SQl
+-- Solution
+SELECT `Category`
+FROM `sql_class_3_assignment`.`product_s`
+GROUP BY `Category`
+HAVING AVG(`Price`) >= 50 AND MAX(`Price`) > 100;
+```
+**Execution :**
+
+![](./img/62_Solution_GROUPBY_HAVING_ORDERBY_18.png)
+
+### Question 19: Consider a table named Orders with the following columns:
+
+**OrderID (integer):** The unique identifier for each order.
+
+**CustomerID (integer):** The unique identifier for each customer.
+
+**OrderDate (date):** The date of the order.
+
+**TotalAmount (decimal):** The total amount of the order.
+### Write an SQL query to find the customer IDs of customers who have placed orders with a total amount greater than $1,000 in any single order and have placed orders on at least three different dates.
 
 **Query :**
 
-**Execution :**
-**Query :**
+```SQL
+-- Solution
+SELECT `CustomerID`
+FROM `sql_class_3_assignment`.`orders`
+GROUP BY `CustomerID`
+HAVING MAX(`TotalAmount`) AND COUNT(DISTINCT `OrderDate`) >= 3;
+```
 
 **Execution :**
-**Query :**
 
-**Execution :**
-**Query :**
+![](./img/63_Solution_GROUPBY_HAVING_ORDERBY_19.png)
 
-**Execution :**
-**Query :**
+<hr>
 
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
-**Query :**
-
-**Execution :**
+**Submitted By: Arpit Dubey**<br>
+**Email ID: aarpitdubey@gmail.com**<br>
+**LinkedIn: [click here](https://www.linkedin.com/in/aarpitdubey/)**<br>
+**Github  : [click here](https://github.com/aarpitdubey)**
+<hr>

@@ -467,32 +467,63 @@ GROUP BY `ProductName`, `Price`;
 **Query :**
 
 ```SQL
-
+SELECT `ProductName`, `Price`, CEIL(`Price`) AS `CeiledPrice`
+FROM `sql_class_3_assignment`.`products`
 ```
 
 **Execution :**
 
+![](./img/36_solution_function_para2_2.png)
 ### Question 3: Calculate the floor (largest integer less than or equal to) of the prices.
 
 **Query :**
 
 ```SQL
-
+-- Solution
+SELECT `ProductName`, `Price`, FLOOR(`Price`) AS `FlooredPrice`
+FROM `sql_class_3_assignment`.`products`;
 ```
 
 **Execution :**
 
-let's view `products` table
+![](./img/37_solution_function_para2_3.png)
+
+- Consider a table named Orders with the following columns:
+
+    **OrderID (integer):** The unique identifier for each order.
+
+    **OrderDate (datetime):** The date and time when the order was placed.
+    
+    **DeliveryDate (datetime):** The date and time when the order was delivered.
+    
+### Question 1: Find the difference in days between the order date and delivery date for each order.
+
+let's view `orders` table
 
 **Query :**
 
 ```SQL
-
+SELECT * 
+FROM `sql_class_3_assignment`.`orders`;
 ```
 
 **Execution :**
 
-let's view `sales` table
+![](./img/38__veiw_orders_table.png)
+
+**Query :**
+
+```SQL
+SELECT `OrderDate`, `DeliveryDate`, DATEDIFF(`DeliveryDate`, `OrderDate`) AS DelayInDeliveryInDays, TIMEDIFF(`DeliveryDate`, `OrderDate`) AS DelayInHours
+FROM `sql_class_3_assignment`.`orders`;
+```
+
+**Execution :**
+
+![](./img/39_solution_function_para3_1.png)
+
+
+let's view `orders` table
 
 **Query :**
 
@@ -503,6 +534,7 @@ let's solve this problem
 **Query :**
 
 **Execution :**
+
 
 let's view `sales` table
 

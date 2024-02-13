@@ -262,12 +262,46 @@ Question 2: Find the ceiling
 */
 
 --Solution
-SELECT `ProductName`, `Price`, CEIL(`Price`) AS ``
+SELECT `ProductName`, `Price`, CEIL(`Price`) AS `CeiledPrice`
+FROM `sql_class_3_assignment`.`products`
+
+/*
+Question 3: Calculate the floor 
+(largest integer less than or equal to) of the prices.
+*/
+
+-- Solution
+SELECT `ProductName`, `Price`, FLOOR(`Price`) AS `FlooredPrice`
+FROM `sql_class_3_assignment`.`products`;
+
+
+/*
+
+    Consider a table named Orders with the following columns:
+    OrderID (integer): The unique identifier for each order.
+    OrderDate (datetime): The date and time when the order was placed.
+    DeliveryDate (datetime): The date and time when the order was delivered.
+    
+*/
+
+-- Question 1: Find the difference in days between the order date and delivery date for each order.
+-- To view the table orders
+SELECT * 
+FROM `sql_class_3_assignment`.`orders`;
+
+-- Solution
+SELECT `OrderDate`, `DeliveryDate`, DATEDIFF(`DeliveryDate`, `OrderDate`) AS DelayInDeliveryInDays, TIMEDIFF(`DeliveryDate`, `OrderDate`) AS DelayInHours
+FROM `sql_class_3_assignment`.`orders`;
+
+-- Question 2: Calculate the total delivery time in hours for all orders.
+
+-- Question 3: Determine the day of the week when each order was placed.
+-- Question 4: Find the orders that were placed on a Saturday (DayOfWeek = 7).
+-- Question 5: Calculate the average delivery time in days for all orders.
+-- Question 6: Find the orders that were delivered on the same day they were placed.
+
+
+*/
 
 
 
-
-
-
-
-.

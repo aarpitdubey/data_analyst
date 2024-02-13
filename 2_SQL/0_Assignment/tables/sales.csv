@@ -1,21 +1,51 @@
-SaleID,Product,Quantity,Price
-10001,Shoes,50,75.00
-10002,Shoes,30,75.00
-10003,Shoes,20,75.00
-10004,TV,10,450.00
-10005,TV,15,450.00
-10006,Headphones,40,30.00
-10007,Headphones,20,30.00
-10008,Headphones,10,30.00
-10009,Smartphone,60,300.00
-10010,Smartphone,25,300.00
-10011,Smartwatch,35,150.00
-10012,Smartwatch,15,150.00
-10013,Laptop,20,850.00
-10014,Laptop,10,850.00
-10015,Speaker,50,100.00
-10016,Speaker,30,100.00
-10017,Desk,15,200.00
-10018,Desk,10,200.00
-10019,Chair,40,75.00
-10020,Chair,20,75.00
+ProductID,SaleDate,QuantitySold,ProductName,Category
+101,2023-01-15,120,Shoes,Footwear
+101,2023-02-18,90,Shoes,Footwear
+101,2023-02-22,110,Shoes,Footwear
+102,2023-02-18,200,Headphones,Electronics
+102,2023-03-01,180,Headphones,Electronics
+102,2023-03-15,90,Headphones,Electronics
+103,2023-01-05,130,Shirt,Apparel
+103,2023-02-12,160,Shirt,Apparel
+103,2023-03-20,140,Shirt,Apparel
+104,2023-01-10,110,Trousers,Apparel
+104,2023-01-25,90,Trousers,Apparel
+104,2023-03-05,120,Trousers,Apparel
+105,2023-01-20,95,Watch,Accessories
+105,2023-02-02,105,Watch,Accessories
+105,2023-02-28,130,Watch,Accessories
+106,2023-03-05,220,Laptop,Electronics
+106,2023-02-10,150,Laptop,Electronics
+106,2023-03-20,180,Laptop,Electronics
+107,2023-03-01,90,Keyboard,Electronics
+107,2023-03-25,120,Keyboard,Electronics
+108,2023-01-10,200,Smartphone,Electronics
+108,2023-02-15,150,Smartphone,Electronics
+108,2023-03-20,180,Smartphone,Electronics
+109,2023-01-02,140,Desk,Office Furniture
+109,2023-02-18,160,Desk,Office Furniture
+109,2023-03-28,120,Desk,Office Furniture
+110,2023-01-13,95,Chair,Office Furniture
+110,2023-02-22,105,Chair,Office Furniture
+110,2023-03-20,130,Chair,Office Furniture
+111,2022-12-25,80,Printer,Electronics
+111,2023-01-15,120,Printer,Electronics
+111,2023-01-28,90,Printer,Electronics
+112,2023-02-02,200,TV,Electronics
+112,2023-02-15,180,TV,Electronics
+112,2023-03-20,160,TV,Electronics
+113,2023-03-05,95,Tablet,Electronics
+113,2023-02-10,105,Tablet,Electronics
+113,2023-03-20,130,Tablet,Electronics
+114,2023-01-18,220,Backpack,Outdoor Accessories
+114,2023-02-22,150,Backpack,Outdoor Accessories
+114,2023-03-30,180,Backpack,Outdoor Accessories
+115,2023-01-12,90,Sunglasses,Accessories
+115,2023-02-25,120,Sunglasses,Accessories
+115,2023-03-28,95,Sunglasses,Accessories
+116,2023-01-08,140,Monitor,Electronics
+116,2023-02-15,160,Monitor,Electronics
+116,2023-03-20,120,Monitor,Electronics
+117,2023-03-02,200,Mouse,Computer Accessories
+117,2023-02-18,120,Mouse,Computer Accessories
+117,2023-03-28,135,Mouse,Computer Accessories

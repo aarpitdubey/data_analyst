@@ -522,28 +522,252 @@ FROM `sql_class_3_assignment`.`orders`;
 
 ![](./img/39_solution_function_para3_1.png)
 
-
-let's view `orders` table
+### Question 2: Calculate the total delivery time in hours for all orders.
 
 **Query :**
 
+```SQL
+SELECT SUM(TIMESTAMPDIFF(HOUR, `OrderDate`, `DeliveryDate`)) AS TotalDeliveryTimeInHours
+FROM `sql_class_3_assignment`.`orders`
+```
 **Execution :**
+
+![](./img/40_solution_function_para3_2.png)
+
+### Question 3: Determine the day of the week when each order was placed.
 
 let's solve this problem
 
 **Query :**
 
+```SQL
+SELECT `OrderID`, `ProductName`, DAYOFWEEK(`OrderDate`) AS DayOfWeek
+FROM `sql_class_3_assignment`.`orders`;
+```
 **Execution :**
 
+![](./img/41_solution_function_para3_3.png)
 
-let's view `sales` table
+### Question 4: Find the orders that were placed on a Saturday (DayOfWeek = 7).
+
+**Query :**
+
+```SQL
+SELECT `OrderID`, `ProductName`, `OrderDate`
+FROM `sql_class_3_assignment`.`orders`
+WHERE DAYOFWEEK(`OrderDate`) = 7;
+```
+**Execution :**
+
+![](./img/42_solution_function_para3_4.png)
+
+### Question 5: Calculate the average delivery time in days for all orders.
+
+**Query :**
+
+```SQL
+SELECT AVG(DATEDIFF(`DeliveryDate`, `OrderDate`)) AS AverageDeliveryTimeInDays
+FROM `sql_class_3_assignment`.`orders`;
+```
+**Execution :**
+
+![](./img/43_solution_function_para3_5.png)
+
+### Question 6: Find the orders that were delivered on the same day they were placed.
+
+**Query :**
+
+```SQL
+SELECT `OrderID`, `ProductName`, `OrderDate`, DATEDIFF(`DeliveryDate`, `OrderDate`) AS `DeliveryDelayInDays`
+FROM `sql_class_3_assignment`.`orders`
+WHERE DATEDIFF(`DeliveryDate`, `OrderDate`) = 0;
+```
+**Execution :**
+
+![](./img/44_solution_function_para3_6.png)
+
+### Question 1: Consider a table named Orders with the following columns:
+   
+   **OrderID (integer):** The unique identifier for each order.
+   
+   **CustomerID (integer):** The unique identifier for each customer.
+   
+   **TotalAmount (decimal):** The total amount of the order.
+### Write an SQL query to find the customer IDs of customers who have placed orders with a total amount greater than $1,000.
+
+**Query :**
+
+```SQL
+SELECT `CustomerID`, `CustomerName`, `TotalAmount`
+FROM `sql_class_3_assignment`.`orders`
+GROUP BY `CustomerID`, `CustomerName`, `TotalAmount`
+HAVING SUM(`TotalAmount`) > 1000;
+```
+**Execution :**
+
+![](./img/45_Solution_GROUPBY_HAVING_ORDERBY_1.png)
+
+
+### Question 2:Consider a table named Sales with the following columns:
+    
+**ProductID (integer):** The unique identifier for each product.
+    
+**SaleDate (date):** The date of the sale.
+    
+**QuantitySold (integer):** The quantity of the product sold on that date.
+
+### Write an SQL query to find the product IDs of products that have been sold in quantities greater than 100 on at least three different sale dates.
+
+**Query :**
+
+```SQL
+SELECT `ProductID`, `ProductName`, `Category`
+FROM `sql_class_3_assignment`.`sales`
+GROUP BY `ProductID`, `ProductName`, `Category`
+HAVING SUM(`QuantitySold`) > 100 AND COUNT(DISTINCT `SaleDate`) >= 3;
+```
+
+**Execution :**
+
+![](./img/46_Solution_GROUPBY_HAVING_ORDERBY_2.png)
+
 
 **Query :**
 
 **Execution :**
 
-let's solve this problem
+**Query :**
 
+**Execution :**
+
+**Query :**
+
+**Execution :**
+
+**Query :**
+
+**Execution :**
+
+**Query :**
+
+**Execution :**
+
+**Query :**
+
+**Execution :**
+
+**Query :**
+
+**Execution :**
+
+**Query :**
+
+**Execution :**
+
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
+**Query :**
+
+**Execution :**
 **Query :**
 
 **Execution :**

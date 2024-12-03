@@ -45,6 +45,8 @@ SHOW DATABASES;
 
 SHOW TABLES;
 
+SELECT * FROM ramayan_is_mythology;
+
 -- Inserting 1st record in the TABLE
 INSERT INTO ramayana.ramayan_is_mythology(
     Chapter_or_kaand, 
@@ -60,12 +62,16 @@ SHOW TABLES;
 
 DROP DATABASE`Ramayana`;
 
+USE growdataskills;
+
 -- Alter to add email column in student_table
 ALTER TABLE student_table ADD email VARCHAR(100);
 
 -- Alter student_table and renaming the column name 'student_name' to 'names'
 ALTER TABLE student_table 
 RENAME COLUMN student_name TO names;
+
+SELECT * FROM student_table;
 
 -- Modify the column course_name VARCHAR(50) to column_name VARCHAR(100)
 ALTER TABLE student_table

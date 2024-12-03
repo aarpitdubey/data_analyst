@@ -1,2 +1,0 @@
-# SUBQUERY IN MySQL
-

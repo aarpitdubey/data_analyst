@@ -238,4 +238,4 @@ FROM `growdataskills`.`datetime_data`;
 SELECT `event_name`, `event_date`,
         DATE_ADD(`event_date`, INTERVAL 3 HOUR) AS `updated_event_date`
 FROM `growdataskills`.`datetime_data`;
-
+ 

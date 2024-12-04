@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS Departments (
     LOCATION_ID INT
 );
 
+
 -- Inserting dummy data in Employees table
 
 INSERT INTO Employees (EMPLOYEE_ID, FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, HIRE_DATE, JOB_ID, SALARY, COMMISSION_PCT, MANAGER_ID, DEPARTMENT_ID)
@@ -81,6 +82,45 @@ VALUES
 (193, 'David', 'Hu', 'david.hu@gmail.com', '911-349-2046', '2026-01-15', 'Strategic Planning Manager', 95000.00, 0.20, 186, 25),
 (194, 'Clara', 'Wu', 'clara.wu@gmail.com', '722-349-2150', '2026-02-01', 'Public Relations Manager', 100000.00, 0.23, 187, 15);
 
+-- Inserting 
+
+INSERT INTO Departments (DEPARTMENT_ID, DEPARTMENT_NAME, MANAGER_ID, LOCATION_ID) VALUES
+(1, 'Sales', 101, 10),
+(2, 'Marketing', 102, 20),
+(3, 'Finance', 103, 30),
+(4, 'IT', 104, 40),
+(5, 'HR', 105, 50),
+(6, 'Research & Development', 106, 60),
+(7, 'Production', 107, 70),
+(8, 'Operations', 108, 80),
+(9, 'Customer Service', 109, 90),
+(10, 'Legal', 110, 100),
+(1, 'Sales', 111, 110),
+(2, 'Marketing', 112, 120),
+(3, 'Finance', 113, 130),
+(4, 'IT', 114, 140),
+(5, 'HR', 115, 150),
+(6, 'Research & Development', 116, 160),
+(7, 'Production', 117, 170),
+(8, 'Operations', 118, 180),
+(9, 'Customer Service', 119, 190),
+(10, 'Legal', 120, 200),
+(1, 'Sales', 121, 210),
+(2, 'Marketing', 122, 220),
+(3, 'Finance', 123, 230),
+(4, 'IT', 124, 240),
+(5, 'HR', 125, 250),
+(6, 'Research & Development', 126, 260),
+(7, 'Production', 127, 270),
+(8, 'Operations', 128, 280),
+(9, 'Customer Service', 129, 290),
+(10, 'Legal', 130, 300),
+(1, 'Sales', 131, 310),
+(2, 'Marketing', 132, 320),
+(3, 'Finance', 133, 330),
+(4, 'IT', 134, 340),
+(5, 'HR', 135, 350);
+
 /*
 Q1. Write a SQL query to find those employees who receive a higher salary than the
 employee with ID 163. Return first name, last name.
@@ -101,12 +141,16 @@ WHERE `salary` > (SELECT `salary`
 FROM `sql_class_4_assignments`.`employees` 
 WHERE `employee_id` = 163);
 
-
+SELECT * FROM `sql_class_4_assignments`.`departments`
 
 /*
 Q. write a SQL query to find out which employees have the same designation as the
 employee whose ID is 169. Return first name, last name, department ID and job ID.
 */
+
+SELECT `first_name`, `last_name`, `department_id`
+FROM `sql_class_4_assignments`.`employees`
+WHERE `salary` = (SELECT MIN(`salary`) FROM `sql_class_4_assignments`.`departments` GROUP BY `department_name`)
 
 
 /*
